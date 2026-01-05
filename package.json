@@ -1,0 +1,17 @@
+{
+  "name": "adaptus",
+  "version": "1.0.0",
+  "description": "Adaptus - Modern Web Platform",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=8080 --open=/",
+    "build": "npm run build:css && npm run build:html",
+    "build:css": "node scripts/build-css.js",
+    "build:html": "node scripts/build-html.js",
+    "serve": "npx http-server dist -p 8080"
+  },
+  "keywords": ["website", "adaptus", "modern"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}
