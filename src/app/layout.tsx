@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+
 import './globals.css';
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
+import { CustomCursor } from '@/components/shared/custom-cursor';
 import { COMPANY_INFO } from '@/lib/constants';
 
 const inter = Inter({
@@ -43,9 +45,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body>
-        <Navigation />
-        {children}
-        <Footer />
+        <CustomCursor>
+          <Navigation />
+          {children}
+          <Footer />
+        </CustomCursor>
       </body>
     </html>
   );

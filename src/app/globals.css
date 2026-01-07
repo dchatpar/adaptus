@@ -195,6 +195,15 @@ a:hover {
   box-shadow: var(--shadow-glow-lg);
 }
 
+/* Cursor utilities */
+.cursor-none {
+  cursor: none;
+}
+
+.cursor-none * {
+  cursor: none !important;
+}
+
 /* ===== BRAND-SAFE GRADIENTS ===== */
 .gradient-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
