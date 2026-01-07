@@ -20,7 +20,7 @@ async function scrapeImage(query: string, slug: string): Promise<string | null> 
     // We limit to 1 image, HD.
     const command = `./.venv/bin/python scripts/image_scraper.py "${query}" --limit 1 --output "${IMAGE_OUTPUT_DIR}" --hd`;
 
-    const { stdout, stderr } = await execPromise(command);
+    const { stdout } = await execPromise(command);
 
     // Parse stdout to find the saved filename
     // Output format: "✅ Saved: filename.jpg (1920x1080)"
