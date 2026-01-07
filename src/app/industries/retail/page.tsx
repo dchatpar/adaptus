@@ -1,7 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useRef } from 'react';
 import {
   ShoppingCart,
   Users,
@@ -24,6 +26,15 @@ import {
 } from 'lucide-react';
 
 export default function RetailPage() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+
   const challenges = [
     {
       icon: Users,
@@ -193,44 +204,38 @@ export default function RetailPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-slate-800 bg-gradient-to-b from-surface to-background py-32">
-        <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
-          >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 px-4 py-2">
-              <ShoppingCart className="h-4 w-4 text-kinetic" />
-              <span className="text-sm font-semibold text-slate-300">Retail & Ecommerce</span>
-            </div>
-            <h1 className="mb-6 text-6xl font-bold text-white md:text-7xl">
-              Convert More Visitors into <span className="text-gradient">Loyal Customers</span>
-            </h1>
-            <p className="mb-8 text-xl text-slate-300 leading-relaxed">
-              Increase conversion rates by 28%, boost AOV by 41%, and reduce cart abandonment with AI-powered personalization, conversion optimization, and omnichannel inventory management.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="#solutions"
-                className="inline-flex items-center gap-2 rounded-lg bg-kinetic px-8 py-4 text-lg font-semibold text-background transition-all hover:scale-105 hover:shadow-glow"
-              >
+      <section ref={heroRef} className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background">
+        <motion.div style={{ y }} className="absolute inset-0 z-0">
+          <Image src="/images/industries/retail/retail_store_ecommerce_shoppin_bing_0001_90e1c27a.webp" alt="Retail Store" fill className="object-cover opacity-20" priority quality={90} />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        </motion.div>
+        <div className="absolute inset-0 grid-pattern opacity-20" />
+        <motion.div style={{ opacity }} className="container relative z-10 py-24">
+          <div className="mx-auto max-w-4xl text-center">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm">
+              <ShoppingCart className="h-5 w-5 text-primary" />
+              <span className="text-sm font-semibold text-primary">Retail & E-commerce Solutions</span>
+            </motion.div>
+            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl">
+              Revolutionize Retail{' '}
+              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">With Omnichannel Excellence</span>
+            </motion.h1>
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl">
+              Boost conversion rates by 65%, increase customer lifetime value by 3x, and deliver personalized experiences at scale.
+            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60">
                 <Zap className="h-5 w-5" />
                 Explore Solutions
+                <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link
-                href="#case-study"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-slate-700 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-slate-800"
-              >
+              <Link href="#case-study" className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800">
                 <BarChart3 className="h-5 w-5" />
                 View Case Study
               </Link>
-            </div>
-          </motion.div>
-        </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Challenges - Bento Grid */}
@@ -599,6 +604,6 @@ export default function RetailPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
