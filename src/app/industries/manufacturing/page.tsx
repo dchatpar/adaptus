@@ -18,10 +18,6 @@ import {
   Cog,
   Shield,
   AlertTriangle,
-  TrendingUp,
-  Zap,
-  Target,
-  Eye,
 } from 'lucide-react';
 
 export default function ManufacturingPage() {
