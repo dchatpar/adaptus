@@ -138,24 +138,41 @@ export default function HomePage() {
             {/* Cortex - Large Tile */}
             <ActiveBentoTile
               size="lg"
-              gradient="linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)"
+              gradient="linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%)"
               delay={0.1}
               expandable
+              className="relative overflow-hidden"
             >
-              <div className="flex h-full flex-col justify-between">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/hero/modern_technology_hero_backgro_bing_0005_4c424326.webp"
+                  alt="AI Technology"
+                  fill
+                  className="object-cover opacity-20"
+                />
+              </div>
+              <div className="relative z-10 flex h-full flex-col justify-between">
                 <div>
                   <Brain className="mb-4 h-12 w-12 text-white" />
                   <h3 className="mb-3 text-3xl font-black text-white">ADAPTUS CORTEX™</h3>
                   <p className="mb-4 text-white/80">
                     AI & Machine Learning agents that optimize operations, predict outcomes, and automate complex workflows.
                   </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white">
+                      Neural Networks
+                    </span>
+                    <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white">
+                      Predictive Analytics
+                    </span>
+                  </div>
                 </div>
                 <Link
                   href="/divisions/cortex"
-                  className="inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
+                  className="mt-4 inline-flex items-center text-sm font-semibold text-white hover:underline"
                 >
                   Explore Cortex
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
             </ActiveBentoTile>
