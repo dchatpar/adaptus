@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
   Factory,
-  TrendingUp,
   Cog,
   BarChart3,
   Users,
@@ -16,7 +15,6 @@ import {
   Clock,
   Target,
   Package,
-  Shield,
   Database,
   Boxes,
 } from 'lucide-react';

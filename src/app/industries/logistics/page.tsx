@@ -8,8 +8,6 @@ import {
   MapPin,
   BarChart3,
   Clock,
-  TrendingUp,
-  Shield,
   Zap,
   CheckCircle2,
   ArrowRight,

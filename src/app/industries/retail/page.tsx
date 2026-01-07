@@ -4,14 +4,12 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
   ShoppingCart,
-  TrendingUp,
   Users,
   Smartphone,
   CreditCard,
   Package,
   BarChart3,
   Zap,
-  Shield,
   Target,
   CheckCircle2,
   ArrowRight,

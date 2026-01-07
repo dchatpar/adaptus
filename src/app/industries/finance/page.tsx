@@ -3,21 +3,18 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
-  TrendingUp,
-  Shield,
-  Lock,
+  DollarSign,
   BarChart3,
-  Users,
   CheckCircle2,
   ArrowRight,
   Globe,
-  Zap,
   Brain,
   Clock,
-  Target,
-  CreditCard,
+  Users,
   Smartphone,
   Database,
+  Shield,
+  Lock,
 } from 'lucide-react';
 
 export default function FinancePage() {
