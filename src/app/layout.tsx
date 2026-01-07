@@ -16,39 +16,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: `${COMPANY_INFO.name} | ${COMPANY_INFO.tagline}`,
   description: COMPANY_INFO.description,
-  keywords: [
-    'enterprise technology',
-    'AI automation',
-    'cybersecurity',
-    'software development',
-    'digital marketing',
-    'talent solutions',
-    'logistics',
-    'Vancouver',
-    'Dubai',
-    'Mumbai',
-  ],
-  authors: [{ name: COMPANY_INFO.name }],
-  openGraph: {
-    title: COMPANY_INFO.name,
-    description: COMPANY_INFO.description,
-    type: 'website',
-    locale: 'en_US',
-  },
+  title: 'AdaptUs Group - Engineering the Digital Spine',
+  description: 'Enterprise AI, Security, and Digital Transformation Solutions',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="cursor-none">
-        <CustomCursor />
-        <Navigation />
-        {children}
-        <Footer />
+    <html lang="en">
+      <body className={inter.className}>
+        <MegaMenu />
+        <main className="pt-20">{children}</main>
       </body>
     </html>
   );
