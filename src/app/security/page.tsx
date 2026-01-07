@@ -1,12 +1,9 @@
-'use client';
-
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, Lock, FileCheck, Eye, AlertTriangle, Award } from 'lucide-react';
 
 import { Section, SectionHeader } from '@/components/ui/section';
 import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
-import { MagneticButton } from '@/components/ui/magnetic-button';
 
 export const metadata: Metadata = {
   title: 'Security & Compliance | AdaptUs Group',
