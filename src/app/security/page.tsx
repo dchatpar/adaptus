@@ -121,7 +121,7 @@ export default function SecurityPage() {
         <BentoGrid className="lg:grid-cols-2">
           {securityLinks.map((link) => (
             <Link key={link.href} href={link.href}>
-              <BentoTile hover="lift" className="h-full cursor-pointer">
+              <BentoTile className="h-full cursor-pointer">
                 <div className="mb-4 inline-flex rounded-lg bg-slate-900 p-3 ring-1 ring-slate-800">
                   <link.icon className="h-8 w-8 text-primary" />
                 </div>
