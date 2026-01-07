@@ -4,21 +4,23 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
   Home,
-  Building2,
-  MapPin,
+  TrendingUp,
   Users,
-  Clock,
   Eye,
   CheckCircle2,
   ArrowRight,
   Globe,
-  BarChart3,
-  Key,
-  Camera,
-  Calendar,
-  Target,
-  Zap,
   Brain,
+  Clock,
+  Camera,
+  Target,
+  MapPin,
+  BarChart3,
+  FileText,
+  DollarSign,
+  Shield,
+  Key,
+  Building2,
 } from 'lucide-react';
 
 export default function RealEstatePage() {

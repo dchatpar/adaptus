@@ -6,7 +6,6 @@ import {
   ShoppingCart,
   Users,
   Smartphone,
-  CreditCard,
   Package,
   BarChart3,
   Zap,
@@ -18,8 +17,10 @@ import {
   MessageSquare,
   Eye,
   Clock,
-  AlertCircle,
   Brain,
+  TrendingUp,
+  Shield,
+  DollarSign,
 } from 'lucide-react';
 
 export default function RetailPage() {
