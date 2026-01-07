@@ -1,4 +1,3 @@
-```json
 {
   "name": "adaptus",
   "version": "0.1.0",
@@ -21,6 +20,13 @@
     "audit:lighthouse": "lhci autorun",
     "audit:all": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
     "lhci": "lhci autorun",
+    "backstop:reference": "backstop reference",
+    "backstop:test": "backstop test",
+    "backstop:approve": "backstop approve",
+    "backstop:report": "backstop openReport",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --exit-zero-on-changes",
     "prepare": "husky"
   },
   "dependencies": {
