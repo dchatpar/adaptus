@@ -23,7 +23,7 @@ import {
 // Modern UI Components
 import { ParallaxHero, GlassPanel } from '@/components/ui/parallax-hero';
 import { BentoGrid, BentoTile } from '@/components/ui/bento-grid';
-import { ScrollReveal, StaggeredGrid } from '@/components/ui/scroll-reveal';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { FloatingCard, MagneticButton } from '@/components/ui/floating-card';
 import { AnimatedCounter, KPICard } from '@/components/ui/animated-counter';
 import { ActiveBentoTile } from '@/components/ui/active-bento';
@@ -31,12 +31,6 @@ import { GridContainer, GridSection } from '@/lib/baseline-grid';
 
 export default function HomePage() {
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end'],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   return (
     <div ref={containerRef} className="relative min-h-screen bg-background">
