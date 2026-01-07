@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
+import { BentoGrid, BentoTile } from '@/components/ui/bento-grid';
 import { Section, SectionHeader } from '@/components/ui/section';
 import { DIVISIONS } from '@/lib/constants';
 
