@@ -203,7 +203,7 @@ export default function RetailPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <section ref={heroRef} className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image src="/images/industries/retail/retail_store_ecommerce_shoppin_bing_0001_90e1c27a.webp" alt="Retail Store" fill className="object-cover opacity-20" priority quality={90} />
