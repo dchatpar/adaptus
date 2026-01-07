@@ -1,0 +1,27 @@
+{
+  "resourceSizes": {
+    "script": 150000,
+    "stylesheet": 50000,
+    "image": 300000,
+    "font": 100000,
+    "document": 50000,
+    "other": 100000,
+    "total": 800000
+  },
+  "resourceCounts": {
+    "script": 15,
+    "stylesheet": 5,
+    "image": 20,
+    "font": 5,
+    "third-party": 10,
+    "total": 60
+  },
+  "timings": {
+    "first-contentful-paint": 2000,
+    "largest-contentful-paint": 2500,
+    "cumulative-layout-shift": 0.1,
+    "total-blocking-time": 300,
+    "speed-index": 3000,
+    "interactive": 3500
+  }
+}
