@@ -48,7 +48,7 @@ export default function SentinelPage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoTile hover="lift">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -70,7 +70,7 @@ export default function SentinelPage() {
               </ul>
             </BentoTile>
 
-            <BentoTile hover="glow">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -105,7 +105,7 @@ export default function SentinelPage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">
               24/7 Security Operations Center
             </h3>
@@ -126,7 +126,7 @@ export default function SentinelPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Managed Infrastructure</h3>
             <p className="mb-4 text-sm text-slate-400">
               Proactive management of servers, networks, and cloud environments. Patch management,
@@ -145,7 +145,7 @@ export default function SentinelPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Compliance Management</h3>
             <p className="mb-4 text-sm text-slate-400">
               Achieve and maintain SOC 2, ISO 27001, HIPAA, PCI-DSS, and GDPR compliance. Continuous
@@ -164,7 +164,7 @@ export default function SentinelPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Penetration Testing</h3>
             <p className="mb-4 text-sm text-slate-400">
               Quarterly penetration tests and vulnerability assessments. Identify weaknesses before

@@ -48,7 +48,7 @@ export default function NexusPage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoTile hover="lift">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -70,7 +70,7 @@ export default function NexusPage() {
               </ul>
             </BentoTile>
 
-            <BentoTile hover="glow">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -111,7 +111,7 @@ export default function NexusPage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Executive Search</h3>
             <p className="mb-4 text-sm text-slate-400">
               C-suite and VP-level placements. Deep industry networks, behavioral assessments, and
@@ -130,7 +130,7 @@ export default function NexusPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Technical Recruiting</h3>
             <p className="mb-4 text-sm text-slate-400">
               Engineers, architects, and technical leaders. Source from top-tier talent pools,
@@ -149,7 +149,7 @@ export default function NexusPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Offshore Team Building</h3>
             <p className="mb-4 text-sm text-slate-400">
               Build and manage offshore development teams in Dubai and Mumbai. Full HR support,
@@ -168,7 +168,7 @@ export default function NexusPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Workforce Planning</h3>
             <p className="mb-4 text-sm text-slate-400">
               Strategic workforce models, org design, and hiring roadmaps. Forecast headcount needs

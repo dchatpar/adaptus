@@ -48,7 +48,7 @@ export default function CortexPage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoTile hover="lift">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -70,7 +70,7 @@ export default function CortexPage() {
               </ul>
             </BentoTile>
 
-            <BentoTile hover="glow">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -107,7 +107,7 @@ export default function CortexPage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">
               Intelligent Document Processing
             </h3>
@@ -128,7 +128,7 @@ export default function CortexPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Predictive Analytics</h3>
             <p className="mb-4 text-sm text-slate-400">
               Forecast demand, identify risks, and optimize resource allocation using machine
@@ -147,7 +147,7 @@ export default function CortexPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Process Automation</h3>
             <p className="mb-4 text-sm text-slate-400">
               Automate repetitive workflows across departments. From procurement to HR to finance,
@@ -166,7 +166,7 @@ export default function CortexPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Conversational AI</h3>
             <p className="mb-4 text-sm text-slate-400">
               Deploy intelligent chatbots and voice assistants for customer service, internal

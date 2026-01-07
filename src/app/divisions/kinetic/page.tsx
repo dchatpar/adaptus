@@ -48,7 +48,7 @@ export default function KineticPage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoTile hover="lift">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -70,7 +70,7 @@ export default function KineticPage() {
               </ul>
             </BentoTile>
 
-            <BentoTile hover="glow">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -109,7 +109,7 @@ export default function KineticPage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Performance Marketing</h3>
             <p className="mb-4 text-sm text-slate-400">
               Paid search, social, display, and programmatic campaigns. Multi-touch attribution,
@@ -128,7 +128,7 @@ export default function KineticPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">SEO & Content Strategy</h3>
             <p className="mb-4 text-sm text-slate-400">
               Technical SEO, content pillar strategy, and programmatic SEO for enterprise sites.
@@ -147,7 +147,7 @@ export default function KineticPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Conversion Rate Optimization</h3>
             <p className="mb-4 text-sm text-slate-400">
               A/B testing infrastructure, experimentation roadmap, and UX optimization. Increase
@@ -166,7 +166,7 @@ export default function KineticPage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">
               Marketing Analytics & Attribution
             </h3>

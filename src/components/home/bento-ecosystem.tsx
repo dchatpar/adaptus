@@ -34,7 +34,7 @@ export function BentoEcosystem() {
 
       <BentoGrid className="lg:grid-cols-3">
         {/* CORTEX - Large card */}
-        <BentoTile span="col-2" hover="glow">
+        <BentoTile>
           <div className="relative h-full overflow-hidden rounded-xl">
             <Image
               src={divisionImages.cortex}
@@ -77,7 +77,7 @@ export function BentoEcosystem() {
         </BentoTile>
 
         {/* SENTINEL */}
-        <BentoTile hover="lift">
+        <BentoTile>
           <div className="relative h-full overflow-hidden rounded-xl">
             <Image
               src={divisionImages.sentinel}
@@ -102,7 +102,7 @@ export function BentoEcosystem() {
         </BentoTile>
 
         {/* FORGE */}
-        <BentoTile hover="lift">
+        <BentoTile>
           <div className="relative h-full overflow-hidden rounded-xl">
             <Image
               src={divisionImages.forge}
@@ -127,7 +127,7 @@ export function BentoEcosystem() {
         </BentoTile>
 
         {/* KINETIC */}
-        <BentoTile hover="lift">
+        <BentoTile>
           <div className="relative h-full overflow-hidden rounded-xl">
             <Image
               src={divisionImages.kinetic}
@@ -152,7 +152,7 @@ export function BentoEcosystem() {
         </BentoTile>
 
         {/* NEXUS - Wide card */}
-        <BentoTile span="col-2" hover="scale">
+        <BentoTile>
           <div className="relative h-full overflow-hidden rounded-xl">
             <Image
               src={divisionImages.nexus}
@@ -183,7 +183,7 @@ export function BentoEcosystem() {
         </BentoTile>
 
         {/* VECTOR */}
-        <BentoTile hover="lift">
+        <BentoTile>
           <div className="relative h-full overflow-hidden rounded-xl">
             <Image
               src={divisionImages.vector}

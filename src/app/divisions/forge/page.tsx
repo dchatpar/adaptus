@@ -48,7 +48,7 @@ export default function ForgePage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoTile hover="lift">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -70,7 +70,7 @@ export default function ForgePage() {
               </ul>
             </BentoTile>
 
-            <BentoTile hover="glow">
+            <BentoTile>
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -107,7 +107,7 @@ export default function ForgePage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Enterprise Web Applications</h3>
             <p className="mb-4 text-sm text-slate-400">
               React, Next.js, TypeScript for frontend. Node.js, Python, Go for backend. PostgreSQL,
@@ -126,7 +126,7 @@ export default function ForgePage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Mobile Applications</h3>
             <p className="mb-4 text-sm text-slate-400">
               Native iOS and Android development. React Native for cross-platform. Offline-first
@@ -145,7 +145,7 @@ export default function ForgePage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">Cloud-Native Architecture</h3>
             <p className="mb-4 text-sm text-slate-400">
               Kubernetes, Docker, serverless functions. AWS, GCP, Azure certified. Auto-scaling,
@@ -164,7 +164,7 @@ export default function ForgePage() {
             </div>
           </BentoTile>
 
-          <BentoTile hover="lift">
+          <BentoTile>
             <h3 className="mb-3 text-xl font-black text-slate-50">API Development & Integration</h3>
             <p className="mb-4 text-sm text-slate-400">
               RESTful and GraphQL APIs. Third-party integrations (Salesforce, SAP, Oracle). Webhook
