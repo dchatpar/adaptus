@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Factory, ShoppingCart } from 'lucide-react';
+import { ArrowRight, TrendingUp, Factory, ShoppingCart } from 'lucide-react';
 
 export function CaseStudiesPreview() {
   const caseStudies = [
