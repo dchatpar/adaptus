@@ -1,3 +1,5 @@
+'use client';
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, Lock, FileCheck, Eye, AlertTriangle, Award } from 'lucide-react';

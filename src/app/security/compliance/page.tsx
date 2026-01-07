@@ -1,11 +1,8 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { FileCheck, Download, CheckCircle2, Clock } from 'lucide-react';
 
 import { Section, SectionHeader } from '@/components/ui/section';
-import { MagneticButton } from '@/components/ui/magnetic-button';
 
 export const metadata: Metadata = {
   title: 'Compliance Certifications | AdaptUs Group Security',
@@ -302,9 +299,12 @@ export default function CompliancePage() {
               Full audit reports, penetration test results, and compliance documentation available
               to customers under NDA.
             </p>
-            <MagneticButton onClick={() => (window.location.href = '/security/assurance')}>
+            <Link
+              href="/security/assurance"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105"
+            >
               Request Security Documentation
-            </MagneticButton>
+            </Link>
           </div>
         </div>
       </Section>
