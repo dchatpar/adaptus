@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
-import { CustomCursor } from '@/components/shared/custom-cursor';
+import { CustomCursor } from '@/components/ui/custom-cursor';
 import { COMPANY_INFO } from '@/lib/constants';
 
 const inter = Inter({
@@ -44,12 +44,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>
-        <CustomCursor>
-          <Navigation />
-          {children}
-          <Footer />
-        </CustomCursor>
+      <body className="cursor-none">
+        <CustomCursor />
+        <Navigation />
+        {children}
+        <Footer />
       </body>
     </html>
   );
