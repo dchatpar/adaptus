@@ -59,7 +59,7 @@ export function BentoEcosystem() {
                 <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
                   {cortex.tagline}
                 </p>
-                <p className="text-slate-300 leading-relaxed">{cortex.description}</p>
+                <p className="text-white/90 leading-relaxed">{cortex.description}</p>
               </div>
               <div className="mt-6">
                 <a
@@ -96,7 +96,7 @@ export function BentoEcosystem() {
               <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
                 {sentinel.tagline}
               </p>
-              <p className="text-sm text-slate-300">{sentinel.description}</p>
+              <p className="text-sm text-white/90">{sentinel.description}</p>
             </div>
           </div>
         </BentoCard>
@@ -121,7 +121,7 @@ export function BentoEcosystem() {
               <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
                 {forge.tagline}
               </p>
-              <p className="text-sm text-slate-300">{forge.description}</p>
+              <p className="text-sm text-white/90">{forge.description}</p>
             </div>
           </div>
         </BentoCard>
@@ -146,7 +146,7 @@ export function BentoEcosystem() {
               <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
                 {kinetic.tagline}
               </p>
-              <p className="text-sm text-slate-300">{kinetic.description}</p>
+              <p className="text-sm text-white/90">{kinetic.description}</p>
             </div>
           </div>
         </BentoCard>
@@ -176,7 +176,7 @@ export function BentoEcosystem() {
                 <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
                   {nexus.tagline}
                 </p>
-                <p className="text-slate-300">{nexus.description}</p>
+                <p className="text-white/90">{nexus.description}</p>
               </div>
             </div>
           </div>
@@ -202,7 +202,7 @@ export function BentoEcosystem() {
               <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
                 {vector.tagline}
               </p>
-              <p className="text-sm text-slate-300">{vector.description}</p>
+              <p className="text-sm text-white/90">{vector.description}</p>
             </div>
           </div>
         </BentoCard>

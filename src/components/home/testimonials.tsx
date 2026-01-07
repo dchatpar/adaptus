@@ -81,7 +81,7 @@ export function Testimonials() {
               </div>
 
               {/* Quote */}
-              <blockquote className="relative mb-6 text-lg leading-relaxed text-slate-300">
+              <blockquote className="relative mb-6 text-lg leading-relaxed text-white/90">
                 "{testimonial.quote}"
               </blockquote>
 
@@ -98,7 +98,7 @@ export function Testimonials() {
                 </div>
                 <div>
                   <div className="font-bold text-slate-50">{testimonial.name}</div>
-                  <div className="text-sm text-slate-400">{testimonial.role}</div>
+                  <div className="text-sm text-white/70">{testimonial.role}</div>
                   <div className="text-xs text-primary">{testimonial.company}</div>
                 </div>
               </div>

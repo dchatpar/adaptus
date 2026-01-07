@@ -108,7 +108,7 @@ export function CaseStudiesPreview() {
                   <h3 className="mb-2 text-xl font-black tracking-tight text-slate-50">
                     {study.title}
                   </h3>
-                  <p className="text-sm text-slate-400">{study.description}</p>
+                  <p className="text-sm text-white/80">{study.description}</p>
                 </div>
 
                 {/* Results Grid */}
@@ -119,7 +119,7 @@ export function CaseStudiesPreview() {
                       <div className="mb-1 text-lg font-black text-gradient bg-gradient-to-r from-primary to-accent-gold bg-clip-text text-transparent">
                         {result.value}
                       </div>
-                      <div className="text-xs text-slate-500">{result.label}</div>
+                      <div className="text-xs text-slate-300">{result.label}</div>
                     </div>
                   ))}
                 </div>

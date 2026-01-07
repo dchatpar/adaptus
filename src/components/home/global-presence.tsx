@@ -93,16 +93,16 @@ export function GlobalPresence() {
                 <h3 className="mb-2 text-2xl font-black tracking-tight text-slate-50">
                   {location.city}
                 </h3>
-                <p className="mb-4 text-sm text-slate-400">{location.country}</p>
+                <p className="mb-4 text-sm text-white/70">{location.country}</p>
 
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Users className="h-4 w-4 text-primary" />
-                    <span className="text-sm font-semibold text-slate-300">{location.employees} Team</span>
+                    <span className="text-sm font-semibold text-white/90">{location.employees} Team</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Building2 className="h-4 w-4 text-primary" />
-                    <span className="text-sm font-semibold text-slate-300">Office</span>
+                    <span className="text-sm font-semibold text-white/90">Office</span>
                   </div>
                 </div>
               </div>

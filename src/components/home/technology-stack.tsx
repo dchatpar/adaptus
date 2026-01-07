@@ -111,7 +111,7 @@ export function TechnologyStack() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: index * 0.1 + techIndex * 0.05 }}
                       whileHover={{ scale: 1.1 }}
-                      className="rounded-lg border border-slate-700 bg-slate-950/50 px-3 py-1.5 text-xs font-semibold text-slate-300 transition-all hover:border-primary hover:text-primary"
+                      className="rounded-lg border border-slate-600 bg-slate-800/50 px-3 py-1.5 text-xs font-semibold text-white/90 transition-all hover:border-primary hover:text-primary hover:bg-primary/10"
                     >
                       {tech}
                     </motion.span>
