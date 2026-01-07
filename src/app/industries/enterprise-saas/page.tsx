@@ -13,10 +13,7 @@ import {
   Zap,
   Brain,
   Clock,
-  Target,
-  Shield,
   Smartphone,
-  Database,
   Code,
 } from 'lucide-react';
 
