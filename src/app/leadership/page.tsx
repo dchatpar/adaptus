@@ -8,7 +8,6 @@ import {
   Mail,
   Award,
   Briefcase,
-  GraduationCap,
   Globe,
   TrendingUp,
   Brain,

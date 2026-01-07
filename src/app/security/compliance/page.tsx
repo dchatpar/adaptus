@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { Metadata } from 'next';
 import { FileCheck, Download, CheckCircle2, Clock } from 'lucide-react';
 
