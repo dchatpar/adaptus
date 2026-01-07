@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
   Truck,
-  Package,
   MapPin,
   BarChart3,
   Clock,
@@ -18,6 +17,9 @@ import {
   Users,
   Boxes,
   Navigation,
+  TrendingUp,
+  Eye,
+  Shield,
 } from 'lucide-react';
 
 export default function LogisticsPage() {
@@ -30,12 +32,14 @@ export default function LogisticsPage() {
       color: '#E53935',
     },
     {
+      icon: TrendingUp,
       title: 'Rising Costs',
       problem: 'Fuel, labor, and warehouse expenses eating into margins',
       impact: 'Logistics costs up 18% YoY for mid-market companies',
       color: '#FF6A00',
     },
     {
+      icon: Eye,
       title: 'Visibility Gaps',
       problem: 'No real-time tracking of shipments and inventory',
       impact: '42% of supply chain disruptions go undetected for 24+ hours',

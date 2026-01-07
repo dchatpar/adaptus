@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
   Factory,
-  Cog,
   BarChart3,
   Users,
   CheckCircle2,
   ArrowRight,
   Globe,
-  Zap,
   Brain,
   Clock,
   Target,
   Package,
   Database,
-  Boxes,
+  Cog,
+  Shield,
+  AlertTriangle,
 } from 'lucide-react';
 
 export default function ManufacturingPage() {
@@ -29,6 +29,7 @@ export default function ManufacturingPage() {
       color: '#E53935',
     },
     {
+      icon: AlertTriangle,
       title: 'Quality Control Issues',
       problem: '23% of products fail quality checks, leading to waste and rework',
       impact: 'Defects cost manufacturers 15-20% of revenue',
