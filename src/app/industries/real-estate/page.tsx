@@ -1,7 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useRef } from 'react';
 import {
   Home,
   TrendingUp,
@@ -21,9 +23,18 @@ import {
   Shield,
   Key,
   Building2,
+  Zap,
 } from 'lucide-react';
 
 export default function RealEstatePage() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   const challenges = [
     {
       icon: Clock,
@@ -192,45 +203,39 @@ export default function RealEstatePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-slate-800 bg-gradient-to-b from-surface to-background py-32">
-        <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
-          >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 px-4 py-2">
-              <Home className="h-4 w-4 text-accent-gold" />
-              <span className="text-sm font-semibold text-slate-300">Real Estate</span>
-            </div>
-            <h1 className="mb-6 text-6xl font-bold text-white md:text-7xl">
-              Sell Homes Faster with <span className="text-gradient">Digital-First Marketing</span>
-            </h1>
-            <p className="mb-8 text-xl text-slate-300 leading-relaxed">
-              Reduce days on market by 42%, generate 3.2x more qualified leads, and increase sale prices by $18K with AI lead scoring, virtual tours, and marketing automation.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="#solutions"
-                className="inline-flex items-center gap-2 rounded-lg bg-accent-gold px-8 py-4 text-lg font-semibold text-background transition-all hover:scale-105 hover:shadow-glow"
-              >
-                <Home className="h-5 w-5" />
+    <>
+      <section ref={heroRef} className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background">
+        <motion.div style={{ y }} className="absolute inset-0 z-0">
+          <Image src="/images/industries/real-estate/modern_real_estate_luxury_prop_bing_0001_f309b1c5.jpeg" alt="Luxury Real Estate" fill className="object-cover opacity-20" priority quality={90} />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        </motion.div>
+        <div className="absolute inset-0 grid-pattern opacity-20" />
+        <motion.div style={{ opacity }} className="container relative z-10 py-24">
+          <div className="mx-auto max-w-4xl text-center">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm">
+              <Home className="h-5 w-5 text-primary" />
+              <span className="text-sm font-semibold text-primary">Real Estate & PropTech Solutions</span>
+            </motion.div>
+            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl">
+              Transform Real Estate{' '}
+              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">With Digital Innovation</span>
+            </motion.h1>
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl">
+              Close deals 50% faster, reduce operational costs by 40%, and deliver exceptional client experiences with modern PropTech.
+            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60">
+                <Zap className="h-5 w-5" />
                 Explore Solutions
+                <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link
-                href="#case-study"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-slate-700 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-slate-800"
-              >
+              <Link href="#case-study" className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800">
                 <BarChart3 className="h-5 w-5" />
                 View Case Study
               </Link>
-            </div>
-          </motion.div>
-        </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Challenges - Bento Grid */}
@@ -599,6 +604,6 @@ export default function RealEstatePage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
