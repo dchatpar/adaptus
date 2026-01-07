@@ -1,0 +1,132 @@
+{
+  "id": "adaptus_visual_regression",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 375,
+      "height": 667
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "label": "desktop_xl",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Homepage - Hero Section",
+      "url": "http://localhost:3000",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 1000,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": ["section:first-of-type"],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Homepage - Bento Grid",
+      "url": "http://localhost:3000",
+      "selectors": ["section:nth-of-type(2)"],
+      "delay": 1500,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Homepage - Metrics Showcase",
+      "url": "http://localhost:3000",
+      "selectors": ["section:nth-of-type(3)"],
+      "delay": 2000,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Homepage - Case Studies",
+      "url": "http://localhost:3000",
+      "selectors": ["section:nth-of-type(4)"],
+      "delay": 2500,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Homepage - Full Page",
+      "url": "http://localhost:3000",
+      "delay": 3000,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Enterprise SaaS - Hero",
+      "url": "http://localhost:3000/industries/enterprise-saas",
+      "selectors": ["section:first-of-type"],
+      "delay": 1000,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Finance - Hero",
+      "url": "http://localhost:3000/industries/finance",
+      "selectors": ["section:first-of-type"],
+      "delay": 1000,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Logistics - Hero",
+      "url": "http://localhost:3000/industries/logistics",
+      "selectors": ["section:first-of-type"],
+      "delay": 1000,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Manufacturing - Hero",
+      "url": "http://localhost:3000/industries/manufacturing",
+      "selectors": ["section:first-of-type"],
+      "delay": 1000,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Real Estate - Hero",
+      "url": "http://localhost:3000/industries/real-estate",
+      "selectors": ["section:first-of-type"],
+      "delay": 1000,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Retail - Hero",
+      "url": "http://localhost:3000/industries/retail",
+      "selectors": ["section:first-of-type"],
+      "delay": 1000,
+      "misMatchThreshold": 0.1
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser", "CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
