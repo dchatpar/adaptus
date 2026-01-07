@@ -68,7 +68,8 @@ export default function HomePage() {
           {/* Subtext */}
           <ScrollReveal delay={0.3}>
             <p className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl">
-              Global IT infrastructure, autonomous AI agents, zero-trust security, and cloud-native software—delivered by 200+ experts across 3 continents.
+              Global IT infrastructure, autonomous AI agents, zero-trust security, and cloud-native
+              software—delivered by 200+ experts across 3 continents.
             </p>
           </ScrollReveal>
 
@@ -121,7 +122,10 @@ export default function HomePage() {
       </ParallaxHero>
 
       {/* Interactive Bento Grid - 6 Divisions */}
-      <GridSection spacing="xl" className="bg-gradient-to-b from-background via-surface to-background">
+      <GridSection
+        spacing="xl"
+        className="bg-gradient-to-b from-background via-surface to-background"
+      >
         <GridContainer maxWidth="7xl">
           <ScrollReveal>
             <div className="mb-16 text-center">
@@ -156,7 +160,8 @@ export default function HomePage() {
                   <Brain className="mb-4 h-12 w-12 text-white" />
                   <h3 className="mb-3 text-3xl font-black text-white">ADAPTUS CORTEX™</h3>
                   <p className="mb-4 text-white/80">
-                    AI & Machine Learning agents that optimize operations, predict outcomes, and automate complex workflows.
+                    AI & Machine Learning agents that optimize operations, predict outcomes, and
+                    automate complex workflows.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white">
@@ -180,108 +185,166 @@ export default function HomePage() {
             {/* Sentinel */}
             <ActiveBentoTile
               size="md"
-              gradient="linear-gradient(135deg, #ef4444 0%, #f97316 100%)"
+              gradient="linear-gradient(135deg, rgba(239, 68, 68, 0.9) 0%, rgba(249, 115, 22, 0.9) 100%)"
               delay={0.2}
+              className="relative overflow-hidden"
             >
-              <Shield className="mb-4 h-10 w-10 text-white" />
-              <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS SENTINEL™</h3>
-              <p className="text-sm text-white/80">
-                Zero-trust security, SOC operations, and 24/7 managed IT infrastructure.
-              </p>
-              <Link
-                href="/divisions/sentinel"
-                className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
-              >
-                Learn More
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/hero/modern_technology_office_works_bing_0001_86480dd4.webp"
+                  alt="Security Technology"
+                  fill
+                  className="object-cover opacity-20"
+                />
+              </div>
+              <div className="relative z-10">
+                <Shield className="mb-4 h-10 w-10 text-white" />
+                <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS SENTINEL™</h3>
+                <p className="text-sm text-white/80">
+                  Zero-trust security, SOC operations, and 24/7 managed IT infrastructure.
+                </p>
+                <Link
+                  href="/divisions/sentinel"
+                  className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
+                >
+                  Learn More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </ActiveBentoTile>
 
             {/* Forge */}
             <ActiveBentoTile
               size="md"
-              gradient="linear-gradient(135deg, #f59e0b 0%, #eab308 100%)"
+              gradient="linear-gradient(135deg, rgba(245, 158, 11, 0.9) 0%, rgba(234, 179, 8, 0.9) 100%)"
               delay={0.3}
+              className="relative overflow-hidden"
             >
-              <Code className="mb-4 h-10 w-10 text-white" />
-              <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS FORGE™</h3>
-              <p className="text-sm text-white/80">
-                Cloud-native software development, microservices, and API-first architecture.
-              </p>
-              <Link
-                href="/divisions/forge"
-                className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
-              >
-                Learn More
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/industries/saas/enterprise_saas_software_platf_bing_0001_0a922f58.webp"
+                  alt="Software Development"
+                  fill
+                  className="object-cover opacity-20"
+                />
+              </div>
+              <div className="relative z-10">
+                <Code className="mb-4 h-10 w-10 text-white" />
+                <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS FORGE™</h3>
+                <p className="text-sm text-white/80">
+                  Cloud-native software development, microservices, and API-first architecture.
+                </p>
+                <Link
+                  href="/divisions/forge"
+                  className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
+                >
+                  Learn More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </ActiveBentoTile>
 
             {/* Kinetic */}
             <ActiveBentoTile
               size="md"
-              gradient="linear-gradient(135deg, #ec4899 0%, #f472b6 100%)"
+              gradient="linear-gradient(135deg, rgba(236, 72, 153, 0.9) 0%, rgba(244, 114, 182, 0.9) 100%)"
               delay={0.4}
+              className="relative overflow-hidden"
             >
-              <Rocket className="mb-4 h-10 w-10 text-white" />
-              <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS KINETIC™</h3>
-              <p className="text-sm text-white/80">
-                Growth marketing, demand generation, and performance analytics.
-              </p>
-              <Link
-                href="/divisions/kinetic"
-                className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
-              >
-                Learn More
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/hero/business_team_collaboration_bing_0023_0ea5a40d.webp"
+                  alt="Marketing & Growth"
+                  fill
+                  className="object-cover opacity-20"
+                />
+              </div>
+              <div className="relative z-10">
+                <Rocket className="mb-4 h-10 w-10 text-white" />
+                <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS KINETIC™</h3>
+                <p className="text-sm text-white/80">
+                  Growth marketing, demand generation, and performance analytics.
+                </p>
+                <Link
+                  href="/divisions/kinetic"
+                  className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
+                >
+                  Learn More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </ActiveBentoTile>
 
             {/* Nexus */}
             <ActiveBentoTile
               size="md"
-              gradient="linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)"
+              gradient="linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(96, 165, 250, 0.9) 100%)"
               delay={0.5}
+              className="relative overflow-hidden"
             >
-              <Globe className="mb-4 h-10 w-10 text-white" />
-              <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS NEXUS™</h3>
-              <p className="text-sm text-white/80">
-                Cloud infrastructure, DevOps automation, and multi-cloud orchestration.
-              </p>
-              <Link
-                href="/divisions/nexus"
-                className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
-              >
-                Learn More
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/tech-stack/technology_stack_cloud_computi_bing_0001_4f95b496.webp"
+                  alt="Cloud Infrastructure"
+                  fill
+                  className="object-cover opacity-20"
+                />
+              </div>
+              <div className="relative z-10">
+                <Globe className="mb-4 h-10 w-10 text-white" />
+                <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS NEXUS™</h3>
+                <p className="text-sm text-white/80">
+                  Cloud infrastructure, DevOps automation, and multi-cloud orchestration.
+                </p>
+                <Link
+                  href="/divisions/nexus"
+                  className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
+                >
+                  Learn More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </ActiveBentoTile>
 
             {/* Vector */}
             <ActiveBentoTile
               size="md"
-              gradient="linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+              gradient="linear-gradient(135deg, rgba(16, 185, 129, 0.9) 0%, rgba(52, 211, 153, 0.9) 100%)"
               delay={0.6}
+              className="relative overflow-hidden"
             >
-              <TrendingUp className="mb-4 h-10 w-10 text-white" />
-              <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS VECTOR™</h3>
-              <p className="text-sm text-white/80">
-                Supply chain optimization, logistics tracking, and real-time analytics.
-              </p>
-              <Link
-                href="/divisions/vector"
-                className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
-              >
-                Learn More
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/industries/logistics/warehouse_logistics_distributi_bing_0001_73ca0084.webp"
+                  alt="Logistics & Supply Chain"
+                  fill
+                  className="object-cover opacity-20"
+                />
+              </div>
+              <div className="relative z-10">
+                <TrendingUp className="mb-4 h-10 w-10 text-white" />
+                <h3 className="mb-2 text-2xl font-black text-white">ADAPTUS VECTOR™</h3>
+                <p className="text-sm text-white/80">
+                  Supply chain optimization, logistics tracking, and real-time analytics.
+                </p>
+                <Link
+                  href="/divisions/vector"
+                  className="mt-4 inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
+                >
+                  Learn More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </ActiveBentoTile>
           </BentoGrid>
         </GridContainer>
       </GridSection>
 
       {/* Metrics Showcase - Animated KPIs */}
-      <GridSection spacing="xl" className="relative overflow-hidden bg-gradient-to-b from-surface to-background">
+      <GridSection
+        spacing="xl"
+        className="relative overflow-hidden bg-gradient-to-b from-surface to-background"
+      >
         <div className="absolute inset-0 grid-pattern opacity-10" />
 
         <GridContainer maxWidth="7xl">
@@ -361,19 +424,22 @@ export default function HomePage() {
                 title: 'Enterprise Fintech Platform',
                 industry: 'Finance',
                 metrics: ['40% faster delivery', '100% security compliance', '$2.5M cost savings'],
-                image: '/images/homepage/case-studies/finance_technology_fintech_tradin_bing_0001_7c8d9e2f.webp',
+                image:
+                  '/images/homepage/case-studies/finance_technology_fintech_tradin_bing_0001_7c8d9e2f.webp',
               },
               {
                 title: 'Global Logistics Optimization',
                 industry: 'Logistics',
                 metrics: ['98% on-time delivery', '100k+ shipments/month', '35% cost reduction'],
-                image: '/images/homepage/case-studies/logistics_warehouse_supply_chain_bing_0001_a4b5c6d7.webp',
+                image:
+                  '/images/homepage/case-studies/logistics_warehouse_supply_chain_bing_0001_a4b5c6d7.webp',
               },
               {
                 title: 'AI-Powered Customer Service',
                 industry: 'Enterprise SaaS',
                 metrics: ['85% automation rate', '60% faster response', '4.8/5 satisfaction'],
-                image: '/images/homepage/case-studies/customer_service_ai_chatbot_supp_bing_0001_e8f9g0h1.webp',
+                image:
+                  '/images/homepage/case-studies/customer_service_ai_chatbot_supp_bing_0001_e8f9g0h1.webp',
               },
             ].map((study, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -472,19 +538,32 @@ export default function HomePage() {
 
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              { city: 'New York', region: 'Americas HQ', timezone: 'EST', image: '/images/homepage/global/new_york_city_skyline_manhattan_bing_0001_i2j3k4l5.webp' },
-              { city: 'London', region: 'EMEA HQ', timezone: 'GMT', image: '/images/homepage/global/london_city_skyline_business_dis_bing_0001_m6n7o8p9.webp' },
-              { city: 'Singapore', region: 'APAC HQ', timezone: 'SGT', image: '/images/homepage/global/singapore_city_skyline_marina_ba_bing_0001_q0r1s2t3.webp' },
+              {
+                city: 'New York',
+                region: 'Americas HQ',
+                timezone: 'EST',
+                image:
+                  '/images/homepage/global/new_york_city_skyline_manhattan_bing_0001_i2j3k4l5.webp',
+              },
+              {
+                city: 'London',
+                region: 'EMEA HQ',
+                timezone: 'GMT',
+                image:
+                  '/images/homepage/global/london_city_skyline_business_dis_bing_0001_m6n7o8p9.webp',
+              },
+              {
+                city: 'Singapore',
+                region: 'APAC HQ',
+                timezone: 'SGT',
+                image:
+                  '/images/homepage/global/singapore_city_skyline_marina_ba_bing_0001_q0r1s2t3.webp',
+              },
             ].map((office, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <FloatingCard className="overflow-hidden p-0">
                   <div className="relative h-64">
-                    <Image
-                      src={office.image}
-                      alt={office.city}
-                      fill
-                      className="object-cover"
-                    />
+                    <Image src={office.image} alt={office.city} fill className="object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
                     <div className="absolute bottom-6 left-6">
                       <h3 className="mb-1 text-3xl font-black text-white">{office.city}</h3>
@@ -519,7 +598,8 @@ export default function HomePage() {
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                quote: 'AdaptUs transformed our infrastructure with zero downtime. Their team is exceptional.',
+                quote:
+                  'AdaptUs transformed our infrastructure with zero downtime. Their team is exceptional.',
                 author: 'Sarah Chen',
                 role: 'CTO, Global Fintech Corp',
                 rating: 5,
@@ -559,7 +639,10 @@ export default function HomePage() {
       </GridSection>
 
       {/* Final CTA */}
-      <GridSection spacing="xl" className="relative overflow-hidden bg-gradient-to-b from-background via-primary/10 to-background">
+      <GridSection
+        spacing="xl"
+        className="relative overflow-hidden bg-gradient-to-b from-background via-primary/10 to-background"
+      >
         <div className="absolute inset-0 grid-pattern opacity-20" />
 
         <GridContainer maxWidth="7xl">
