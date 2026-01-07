@@ -3,13 +3,11 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
-  FileText,
   TrendingUp,
   DollarSign,
   Users,
   Target,
   ArrowRight,
-  CheckCircle2,
   BarChart3,
   Building2,
   ShoppingCart,

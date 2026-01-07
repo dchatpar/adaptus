@@ -16,7 +16,6 @@ import {
   MapPin,
   Calendar,
   Briefcase,
-  ArrowRight,
 } from 'lucide-react';
 
 export default function AboutPage() {

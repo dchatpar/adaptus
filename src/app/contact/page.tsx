@@ -7,7 +7,6 @@ import {
   MapPin,
   Send,
   Building2,
-  Globe,
   Clock,
   CheckCircle2,
   Brain,

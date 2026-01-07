@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
-  DollarSign,
   TrendingUp,
   Shield,
   Lock,
@@ -14,8 +13,6 @@ import {
   Globe,
   Zap,
   Brain,
-  AlertTriangle,
-  FileText,
   Clock,
   Target,
   CreditCard,

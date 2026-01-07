@@ -13,7 +13,6 @@ import {
   Globe,
   Zap,
   Brain,
-  AlertTriangle,
   Clock,
   Target,
   Package,
@@ -32,7 +31,6 @@ export default function ManufacturingPage() {
       color: '#E53935',
     },
     {
-      icon: AlertTriangle,
       title: 'Quality Control Issues',
       problem: '23% of products fail quality checks, leading to waste and rework',
       impact: 'Defects cost manufacturers 15-20% of revenue',

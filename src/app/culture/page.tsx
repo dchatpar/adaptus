@@ -6,18 +6,11 @@ import {
   Heart,
   Users,
   Globe,
-  Award,
-  Coffee,
-  Laptop,
-  Plane,
-  GraduationCap,
-  TrendingUp,
-  Shield,
-  Zap,
-  Target,
   CheckCircle2,
   MapPin,
   Building2,
+  Zap,
+  Target,
 } from 'lucide-react';
 
 export default function CulturePage() {

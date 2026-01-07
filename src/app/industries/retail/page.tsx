@@ -19,7 +19,6 @@ import {
   Star,
   MessageSquare,
   Eye,
-  DollarSign,
   Clock,
   AlertCircle,
   Brain,

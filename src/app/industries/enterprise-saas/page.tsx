@@ -12,13 +12,11 @@ import {
   Globe,
   Zap,
   Brain,
-  AlertTriangle,
   Clock,
   Target,
   Shield,
   Smartphone,
   Database,
-  DollarSign,
   Code,
 } from 'lucide-react';
 
@@ -32,7 +30,6 @@ export default function EnterpriseSaaSPage() {
       color: '#E53935',
     },
     {
-      icon: DollarSign,
       title: 'Customer Acquisition Costs',
       problem: 'CAC has increased 60% over the past 5 years',
       impact: 'Average CAC payback period is 11-14 months',
