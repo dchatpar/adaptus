@@ -176,7 +176,7 @@ export function MegaMenu({ className }: MegaMenuProps) {
     <motion.nav
       ref={menuRef}
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        'fixed top-0 left-0 right-0 z-[100] transition-all duration-300',
         isSticky ? 'bg-background/95 backdrop-blur-lg shadow-lg' : 'bg-background/80 backdrop-blur-sm',
         className
       )}
@@ -184,10 +184,10 @@ export function MegaMenu({ className }: MegaMenuProps) {
       animate={{ y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3 flex-shrink-0">
             <div className="text-2xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               ADAPTUS
             </div>
@@ -278,23 +278,23 @@ interface MegaPanelProps {
 function MegaPanel({ menu, searchQuery, setSearchQuery }: MegaPanelProps) {
   return (
     <motion.div
-      className="absolute left-0 right-0 top-full mt-2 bg-surface/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden"
+      className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[calc(100vw-2rem)] max-w-7xl bg-surface/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden z-[90]"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.2 }}
     >
-      <div className="container mx-auto p-8">
-        {/* Search Bar */}
-        <div className="mb-6">
+      <div className="p-8">
+        {/* Search Bar - 8px grid aligned */}
+        <div className="mb-8">
           <div className="relative max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" />
             <input
               type="text"
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full pl-12 pr-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
             />
           </div>
         </div>
@@ -385,15 +385,15 @@ function MobileMenu({ menuData, onClose }: MobileMenuProps) {
 
   return (
     <motion.div
-      className="fixed inset-0 bg-background z-50 lg:hidden overflow-y-auto"
+      className="fixed inset-0 bg-background z-[110] lg:hidden overflow-y-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
     >
       <div className="container mx-auto px-4 py-6">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        {/* Header - 8px grid aligned */}
+        <div className="flex items-center justify-between mb-8 h-16">
           <div className="text-2xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             ADAPTUS
           </div>
