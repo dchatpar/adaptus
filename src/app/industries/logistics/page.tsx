@@ -1,7 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useRef } from 'react';
 import {
   Truck,
   MapPin,
@@ -10,7 +12,6 @@ import {
   Zap,
   CheckCircle2,
   ArrowRight,
-  Globe,
   Warehouse,
   Route,
   Target,
@@ -20,9 +21,19 @@ import {
   TrendingUp,
   Eye,
   Shield,
+  Globe,
 } from 'lucide-react';
 
 export default function LogisticsPage() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+
   const painPoints = [
     {
       icon: Clock,
@@ -152,45 +163,46 @@ export default function LogisticsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-slate-800 bg-gradient-to-b from-surface to-background py-32">
-        <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
-          >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 px-4 py-2">
-              <Truck className="h-4 w-4 text-vector" />
-              <span className="text-sm font-semibold text-slate-300">Logistics & Distribution</span>
-            </div>
-            <h1 className="mb-6 text-6xl font-bold text-white md:text-7xl">
-              Precision Logistics for the <span className="text-gradient">Modern Supply Chain</span>
-            </h1>
-            <p className="mb-8 text-xl text-slate-300 leading-relaxed">
-              Cut delivery times by 31%, reduce costs by 23%, and achieve 99%+ on-time delivery rates with AI-powered route optimization, real-time tracking, and predictive analytics.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="#solutions"
-                className="inline-flex items-center gap-2 rounded-lg bg-vector px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105 hover:shadow-glow"
-              >
-                <Navigation className="h-5 w-5" />
+    <>
+      <section ref={heroRef} className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background">
+        <motion.div style={{ y }} className="absolute inset-0 z-0">
+          <Image
+            src="/images/industries/logistics/warehouse_logistics_distributi_bing_0001_73ca0084.webp"
+            alt="Warehouse & Logistics"
+            fill
+            className="object-cover opacity-20"
+            priority
+            quality={90}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        </motion.div>
+        <div className="absolute inset-0 grid-pattern opacity-20" />
+        <motion.div style={{ opacity }} className="container relative z-10 py-24">
+          <div className="mx-auto max-w-4xl text-center">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm">
+              <Truck className="h-5 w-5 text-primary" />
+              <span className="text-sm font-semibold text-primary">Logistics & Distribution Solutions</span>
+            </motion.div>
+            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl">
+              Optimize Your Supply Chain{' '}
+              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">With AI-Powered Logistics</span>
+            </motion.h1>
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl">
+              Reduce delivery times by 40%, cut costs by 35%, and achieve 99.9% accuracy with intelligent routing and real-time tracking.
+            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60">
+                <Zap className="h-5 w-5" />
                 Explore Solutions
+                <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link
-                href="#case-study"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-slate-700 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-slate-800"
-              >
+              <Link href="#case-study" className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800">
                 <BarChart3 className="h-5 w-5" />
                 View Case Study
               </Link>
-            </div>
-          </motion.div>
-        </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Pain Points - Bento Grid */}
@@ -523,6 +535,6 @@ export default function LogisticsPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
