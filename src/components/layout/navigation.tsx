@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS, COMPANY_INFO } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
+import { MegaMenu } from './mega-menu';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -46,15 +47,7 @@ export function Navigation() {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-semibold text-slate-300 transition-colors hover:text-primary"
-            >
-              {link.name}
-            </Link>
-          ))}
+          <MegaMenu />
           <Button size="sm">Get Started</Button>
         </div>
 
