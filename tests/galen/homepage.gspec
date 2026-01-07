@@ -1,0 +1,54 @@
+@objects
+  header          css     header
+  hero            css     section:first-of-type
+  bentoGrid       css     section:nth-of-type(2)
+  metrics         css     section:nth-of-type(3)
+  caseStudies     css     section:nth-of-type(4)
+  footer          css     footer
+
+= Homepage Layout =
+  @on desktop
+    header:
+      height 80px
+      inside screen 0px top
+
+    hero:
+      height > 600px
+      inside screen 0px left right
+      below header 0px
+
+    bentoGrid:
+      inside screen 32px left right
+      below hero 80px to 160px
+
+    metrics:
+      inside screen 32px left right
+      below bentoGrid 80px to 160px
+
+  @on tablet
+    header:
+      height 64px
+
+    hero:
+      height > 500px
+      inside screen 0px left right
+
+    bentoGrid:
+      inside screen 24px left right
+
+    metrics:
+      inside screen 24px left right
+
+  @on mobile
+    header:
+      height 64px
+
+    hero:
+      height > 400px
+      inside screen 0px left right
+
+    bentoGrid:
+      inside screen 16px left right
+
+    metrics:
+      inside screen 16px left right
