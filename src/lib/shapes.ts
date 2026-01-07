@@ -33,10 +33,10 @@ export const bentoSizes = {
   tall: 'col-span-1 row-span-2',
 } as const;
 
-// Helper function to get random shape
+// Helper function to get a random polygon shape
 export function getRandomShape(): string {
   const shapes = Object.values(polygonShapes);
-  return shapes[Math.floor(Math.random() * shapes.length)];
+  return shapes[Math.floor(Math.random() * shapes.length)] || 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
 }
 
 // Helper function to create gradient overlay

@@ -1,10 +1,9 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { designTokens } from '@/lib/design-tokens';
 
 interface AnimatedCounterProps {
   value: number;
@@ -62,7 +61,9 @@ export function AnimatedCounter({
     if (!separator) return fixed;
 
     const parts = fixed.split('.');
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    if (parts[0]) {
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
     return parts.join('.');
   };
 

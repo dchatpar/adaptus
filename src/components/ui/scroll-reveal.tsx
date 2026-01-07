@@ -2,7 +2,6 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, type ReactNode } from 'react';
-import { designTokens } from '@/lib/design-tokens';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -54,7 +53,7 @@ export function ScrollReveal({
       transition={{
         duration: 0.6,
         delay,
-        ease: designTokens.motion.easing.default,
+        ease: [0.4, 0, 0.2, 1],
       }}
       className={className}
     >

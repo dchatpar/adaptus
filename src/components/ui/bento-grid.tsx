@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { type ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import { bentoSizes, polygonShapes, type BentoSize, type ShapeName } from '@/lib/shapes';
-import { designTokens } from '@/lib/design-tokens';
 
 interface BentoTileProps {
   children: ReactNode;
@@ -35,7 +34,7 @@ export function BentoTile({
       transition={{
         duration: 0.6,
         delay,
-        ease: designTokens.motion.easing.default,
+        ease: [0.4, 0, 0.2, 1],
       }}
       whileHover={{
         scale: 1.02,

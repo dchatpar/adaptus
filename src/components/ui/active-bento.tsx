@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useState, type ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-import { designTokens } from '@/lib/design-tokens';
 
 interface ActiveBentoTileProps {
   children: ReactNode;
@@ -44,7 +43,7 @@ export function ActiveBentoTile({
       transition={{
         duration: 0.6,
         delay,
-        ease: designTokens.motion.easing.default,
+        ease: [0.4, 0, 0.2, 1],
       }}
       whileHover={{
         scale: isExpanded ? 1 : 1.03,
@@ -147,11 +146,3 @@ export function ActiveBentoTile({
     </motion.div>
   );
 }
-
-// Add shimmer animation to global CSS
-const shimmerKeyframes = `
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-`;
