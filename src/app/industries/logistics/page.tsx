@@ -33,7 +33,6 @@ export default function LogisticsPage() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-
   const painPoints = [
     {
       icon: Clock,
@@ -70,7 +69,11 @@ export default function LogisticsPage() {
       icon: Route,
       title: 'Smart Route Optimization',
       description: 'AI-powered routing reduces fuel costs by 23% and delivery times by 31%',
-      features: ['Real-time traffic integration', 'Multi-stop optimization', 'Driver performance analytics'],
+      features: [
+        'Real-time traffic integration',
+        'Multi-stop optimization',
+        'Driver performance analytics',
+      ],
       division: 'ADAPTUS VECTOR™',
       color: '#E53935',
     },
@@ -164,7 +167,10 @@ export default function LogisticsPage() {
 
   return (
     <>
-      <section ref={heroRef} className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background">
+      <section
+        ref={heroRef}
+        className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background"
+      >
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image
             src="/images/industries/logistics/warehouse_logistics_distributi_bing_0001_73ca0084.webp"
@@ -179,24 +185,55 @@ export default function LogisticsPage() {
         <div className="absolute inset-0 grid-pattern opacity-20" />
         <motion.div style={{ opacity }} className="container relative z-10 py-24">
           <div className="mx-auto max-w-4xl text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm"
+            >
               <Truck className="h-5 w-5 text-primary" />
-              <span className="text-sm font-semibold text-primary">Logistics & Distribution Solutions</span>
+              <span className="text-sm font-semibold text-primary">
+                Logistics & Distribution Solutions
+              </span>
             </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl"
+            >
               Optimize Your Supply Chain{' '}
-              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">With AI-Powered Logistics</span>
+              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">
+                With AI-Powered Logistics
+              </span>
             </motion.h1>
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl">
-              Reduce delivery times by 40%, cut costs by 35%, and achieve 99.9% accuracy with intelligent routing and real-time tracking.
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl"
+            >
+              Reduce delivery times by 40%, cut costs by 35%, and achieve 99.9% accuracy with
+              intelligent routing and real-time tracking.
             </motion.p>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Link href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col gap-4 sm:flex-row sm:justify-center"
+            >
+              <Link
+                href="#solutions"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60"
+              >
                 <Zap className="h-5 w-5" />
                 Explore Solutions
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link href="#case-study" className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800">
+              <Link
+                href="#case-study"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800"
+              >
                 <BarChart3 className="h-5 w-5" />
                 View Case Study
               </Link>
@@ -454,9 +491,7 @@ export default function LogisticsPage() {
         <div className="container">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-5xl font-bold text-white">Related Services</h2>
-            <p className="text-xl text-slate-400">
-              Comprehensive solutions across our divisions
-            </p>
+            <p className="text-xl text-slate-400">Comprehensive solutions across our divisions</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             <Link
@@ -493,9 +528,7 @@ export default function LogisticsPage() {
             >
               <Shield className="mb-4 h-12 w-12 text-sentinel" />
               <h3 className="mb-2 text-2xl font-bold text-white">ADAPTUS SENTINEL™</h3>
-              <p className="mb-4 text-slate-400">
-                Real-time tracking and IoT sensor integration
-              </p>
+              <p className="mb-4 text-slate-400">Real-time tracking and IoT sensor integration</p>
               <div className="flex items-center gap-2 text-sentinel">
                 <span className="font-semibold">Learn More</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -505,34 +538,373 @@ export default function LogisticsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section bg-surface">
-        <div className="container">
-          <div className="rounded-2xl border border-vector/30 bg-vector/5 p-16 text-center">
-            <Truck className="mx-auto mb-6 h-20 w-20 text-vector" />
-            <h2 className="mb-4 text-4xl font-bold text-white">
-              Ready to Transform Your Logistics?
+      {/* CTA Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-primary py-24">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.2),transparent)]" />
+        </div>
+        <div className="container relative z-10 mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl"
+          >
+            <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
+              Optimize Your Supply Chain
             </h2>
-            <p className="mb-8 text-xl text-slate-300">
-              Schedule a free consultation with our logistics optimization experts
+            <p className="mb-8 text-xl text-white/90">
+              Join 250+ logistics companies achieving 35% cost reduction with AdaptUs
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="/contact?division=vector"
-                className="inline-flex items-center gap-2 rounded-lg bg-vector px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105"
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 font-bold text-primary transition-all hover:scale-105 hover:shadow-2xl"
               >
-                <Users className="h-5 w-5" />
-                Schedule Consultation
+                Schedule Demo
+                <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
-                href="/divisions/vector"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-vector px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-vector/10"
+                href="/case-studies"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white bg-transparent px-8 py-4 font-bold text-white transition-all hover:bg-white hover:text-primary"
               >
-                <Globe className="h-5 w-5" />
-                Explore VECTOR Division
+                View Case Studies
               </Link>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Implementation Roadmap */}
+      <section className="bg-background py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
+              90-Day Optimization Roadmap
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-slate-400">
+              From assessment to full supply chain optimization
+            </p>
           </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {[
+              {
+                phase: 'Phase 1: Analysis',
+                duration: '0-30 Days',
+                icon: BarChart3,
+                color: '#6366f1',
+                steps: [
+                  'Supply chain audit',
+                  'Route optimization analysis',
+                  'Warehouse efficiency assessment',
+                  'Technology integration planning',
+                  'Cost reduction strategy',
+                  'Team capability mapping',
+                ],
+                deliverables: [
+                  'Current state analysis',
+                  'Optimization opportunities',
+                  'Implementation roadmap',
+                  'ROI projections',
+                ],
+              },
+              {
+                phase: 'Phase 2: Implementation',
+                duration: '31-60 Days',
+                icon: Zap,
+                color: '#8b5cf6',
+                steps: [
+                  'Route optimization deployment',
+                  'Real-time tracking activation',
+                  'Warehouse automation',
+                  'Fleet management integration',
+                  'Predictive analytics setup',
+                  'Driver training program',
+                ],
+                deliverables: [
+                  'Live tracking system',
+                  'Optimized routes',
+                  'Automated workflows',
+                  'Performance dashboard',
+                ],
+              },
+              {
+                phase: 'Phase 3: Scale',
+                duration: '61-90 Days',
+                icon: TrendingUp,
+                color: '#ec4899',
+                steps: [
+                  'Multi-facility expansion',
+                  'Advanced predictive analytics',
+                  'Full automation deployment',
+                  'Supplier integration',
+                  'Customer portal launch',
+                  'Continuous optimization',
+                ],
+                deliverables: [
+                  'Enterprise-wide deployment',
+                  'Full visibility',
+                  'Automated operations',
+                  'Scalable infrastructure',
+                ],
+              },
+            ].map((phase, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group rounded-2xl border border-slate-800 bg-surface p-8 transition-all hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div
+                  className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl"
+                  style={{ backgroundColor: `${phase.color}20` }}
+                >
+                  <phase.icon className="h-8 w-8" style={{ color: phase.color }} />
+                </div>
+                <div className="mb-2 text-sm font-semibold uppercase tracking-wider text-slate-400">
+                  {phase.duration}
+                </div>
+                <h3 className="mb-6 text-2xl font-black text-white">{phase.phase}</h3>
+                <div className="mb-6">
+                  <h4 className="mb-3 text-sm font-bold uppercase text-slate-400">
+                    Key Activities
+                  </h4>
+                  <ul className="space-y-2">
+                    {phase.steps.map((step, j) => (
+                      <li key={j} className="flex items-start gap-2 text-slate-300">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-500" />
+                        <span className="text-sm">{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="mb-3 text-sm font-bold uppercase text-slate-400">Deliverables</h4>
+                  <ul className="space-y-2">
+                    {phase.deliverables.map((del, j) => (
+                      <li key={j} className="flex items-start gap-2 text-slate-300">
+                        <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-500" />
+                        <span className="text-sm">{del}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="bg-surface py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
+              Flexible Logistics Pricing
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-slate-400">
+              Scale from small fleets to global networks
+            </p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {[
+              {
+                name: 'Regional',
+                price: '$4,000',
+                period: '/month',
+                description: 'For regional logistics operations',
+                features: [
+                  'Up to 50 vehicles',
+                  'Basic route optimization',
+                  'Real-time GPS tracking',
+                  'Mobile driver app',
+                  'Email support (24h)',
+                  'Monthly reports',
+                  'Standard integrations',
+                ],
+                cta: 'Start Trial',
+                highlight: false,
+              },
+              {
+                name: 'National',
+                price: '$12,500',
+                period: '/month',
+                description: 'For national logistics networks',
+                features: [
+                  'Up to 500 vehicles',
+                  'Advanced AI routing',
+                  'Predictive analytics',
+                  'Warehouse automation',
+                  'Priority support (4h)',
+                  'Weekly optimization',
+                  'Custom integrations',
+                  'Fleet management',
+                  'Load optimization',
+                ],
+                cta: 'Schedule Demo',
+                highlight: true,
+              },
+              {
+                name: 'Enterprise',
+                price: 'Custom',
+                period: 'pricing',
+                description: 'For global supply chain operations',
+                features: [
+                  'Unlimited vehicles',
+                  'Global optimization',
+                  'Multi-modal logistics',
+                  'Dedicated team (1h SLA)',
+                  'Real-time dashboards',
+                  'Multi-facility deployment',
+                  'Advanced compliance',
+                  'Custom development',
+                  'White-glove service',
+                ],
+                cta: 'Contact Sales',
+                highlight: false,
+              },
+            ].map((tier, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`relative rounded-2xl p-8 ${tier.highlight ? 'border-2 border-primary bg-gradient-to-br from-primary/10 to-accent/10 shadow-2xl' : 'border border-slate-800 bg-background'}`}
+              >
+                {tier.highlight && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-1 text-sm font-bold text-white">
+                    Most Popular
+                  </div>
+                )}
+                <div className="mb-6">
+                  <h3 className="mb-2 text-2xl font-black text-white">{tier.name}</h3>
+                  <p className="text-sm text-slate-400">{tier.description}</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-black text-white">{tier.price}</span>
+                    <span className="text-slate-400">{tier.period}</span>
+                  </div>
+                </div>
+                <Link
+                  href="/contact"
+                  className={`mb-8 block w-full rounded-xl py-3 text-center font-bold transition-all ${tier.highlight ? 'bg-gradient-to-r from-primary to-accent text-white hover:scale-105 hover:shadow-2xl' : 'border-2 border-slate-700 text-white hover:border-slate-600 hover:bg-slate-800'}`}
+                >
+                  {tier.cta}
+                </Link>
+                <ul className="space-y-3">
+                  {tier.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                      <span className="text-slate-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-12 text-center text-sm text-slate-400">
+            All plans include: 99.99% uptime SLA, regular updates, and 24/7 monitoring
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-background py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-slate-400">
+              Everything about logistics optimization
+            </p>
+          </div>
+          <div className="mx-auto max-w-4xl space-y-6">
+            {[
+              {
+                q: 'How much can we reduce logistics costs?',
+                a: 'Our clients typically achieve 30-40% cost reduction within the first year. This comes from optimized routing (15-20% fuel savings), improved fleet utilization (25% increase), reduced empty miles (40% decrease), and better warehouse efficiency (30% improvement). We provide detailed ROI projections during discovery.',
+              },
+              {
+                q: 'How does route optimization work?',
+                a: 'Our AI analyzes millions of data points including traffic patterns, delivery windows, vehicle capacity, driver schedules, fuel costs, and real-time conditions. The system continuously optimizes routes throughout the day, adapting to changes and reducing miles driven while improving on-time delivery rates.',
+              },
+              {
+                q: 'Can you integrate with our existing systems?',
+                a: 'Yes! We integrate with major TMS, WMS, and ERP systems including SAP, Oracle, Manhattan, JDA, and others. Our platform also connects with telematics providers like Geotab, Samsara, and Verizon Connect. Custom integrations are included in National and Enterprise plans.',
+              },
+              {
+                q: 'What about driver adoption?',
+                a: 'We provide comprehensive driver training and an intuitive mobile app. The app shows optimized routes, turn-by-turn navigation, delivery confirmations, and real-time communication. Drivers typically see reduced stress and increased earnings through better routes, leading to 95%+ adoption rates.',
+              },
+              {
+                q: 'How quickly can we see results?',
+                a: 'Initial improvements appear within 2-3 weeks of deployment. Full optimization occurs by 90 days. Early wins include 10-15% route efficiency gains and real-time visibility. By 90 days, clients see full cost reduction targets met with sustained improvements through continuous optimization.',
+              },
+              {
+                q: 'What about multi-modal logistics?',
+                a: 'Our Enterprise platform handles all transportation modes: trucking, rail, ocean, air freight, and last-mile delivery. We optimize across modes, considering costs, transit times, and carbon footprint. The system provides unified visibility and management across your entire supply chain.',
+              },
+              {
+                q: 'How do you ensure data security?',
+                a: 'We employ end-to-end encryption, secure cloud infrastructure, and maintain SOC 2 Type II certification. All data is encrypted at rest and in transit. We offer private cloud deployment for sensitive operations and never share customer data. Regular security audits ensure compliance.',
+              },
+              {
+                q: 'What ongoing support do you provide?',
+                a: 'All plans include 24/7 technical support, regular updates, and quarterly business reviews. National and Enterprise clients get dedicated success managers, priority support, and access to our logistics optimization experts for strategic guidance and continuous improvement.',
+              },
+            ].map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="rounded-2xl border border-slate-800 bg-surface p-6 transition-all hover:border-slate-700"
+              >
+                <h3 className="mb-3 text-xl font-bold text-white">{faq.q}</h3>
+                <p className="leading-relaxed text-slate-300">{faq.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-gradient-to-br from-surface to-background py-24">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl"
+          >
+            <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
+              Ready to Optimize Your Logistics?
+            </h2>
+            <p className="mb-8 text-xl text-slate-400">
+              Join 250+ companies achieving 35% cost reduction
+            </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 py-4 font-bold text-white transition-all hover:scale-105 hover:shadow-2xl"
+              >
+                Get Started Today
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-primary px-8 py-4 font-bold text-white transition-all hover:bg-primary/10"
+              >
+                View Success Stories
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
