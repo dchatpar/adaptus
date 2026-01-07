@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Users } from 'lucide-react';
 
 import { Section, SectionHeader } from '@/components/ui/section';
-import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
+import { BentoGrid, BentoTile } from '@/components/ui/bento-grid';
 import { MagneticButton } from '@/components/ui/magnetic-button';
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default function NexusPage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoCard hover="lift">
+            <BentoTile hover="lift">
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -68,9 +68,9 @@ export default function NexusPage() {
                   <span>Executive search firms charging 30%+ with poor culture fit</span>
                 </li>
               </ul>
-            </BentoCard>
+            </BentoTile>
 
-            <BentoCard hover="glow">
+            <BentoTile hover="glow">
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -96,7 +96,7 @@ export default function NexusPage() {
                   </span>
                 </li>
               </ul>
-            </BentoCard>
+            </BentoTile>
           </div>
         </div>
       </Section>
@@ -111,7 +111,7 @@ export default function NexusPage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Executive Search</h3>
             <p className="mb-4 text-sm text-slate-400">
               C-suite and VP-level placements. Deep industry networks, behavioral assessments, and
@@ -128,9 +128,9 @@ export default function NexusPage() {
                 Assessment
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Technical Recruiting</h3>
             <p className="mb-4 text-sm text-slate-400">
               Engineers, architects, and technical leaders. Source from top-tier talent pools,
@@ -147,9 +147,9 @@ export default function NexusPage() {
                 Data Science
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Offshore Team Building</h3>
             <p className="mb-4 text-sm text-slate-400">
               Build and manage offshore development teams in Dubai and Mumbai. Full HR support,
@@ -166,9 +166,9 @@ export default function NexusPage() {
                 Managed Teams
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Workforce Planning</h3>
             <p className="mb-4 text-sm text-slate-400">
               Strategic workforce models, org design, and hiring roadmaps. Forecast headcount needs
@@ -185,7 +185,7 @@ export default function NexusPage() {
                 Forecasting
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
         </BentoGrid>
       </Section>
 

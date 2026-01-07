@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { TrendingUp } from 'lucide-react';
 
 import { Section, SectionHeader } from '@/components/ui/section';
-import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
+import { BentoGrid, BentoTile } from '@/components/ui/bento-grid';
 import { MagneticButton } from '@/components/ui/magnetic-button';
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default function KineticPage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoCard hover="lift">
+            <BentoTile hover="lift">
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -68,9 +68,9 @@ export default function KineticPage() {
                   <span>No experimentation framework to test and iterate systematically</span>
                 </li>
               </ul>
-            </BentoCard>
+            </BentoTile>
 
-            <BentoCard hover="glow">
+            <BentoTile hover="glow">
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -94,7 +94,7 @@ export default function KineticPage() {
                   <span>Predictable CAC with monthly reporting on unit economics</span>
                 </li>
               </ul>
-            </BentoCard>
+            </BentoTile>
           </div>
         </div>
       </Section>
@@ -109,7 +109,7 @@ export default function KineticPage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Performance Marketing</h3>
             <p className="mb-4 text-sm text-slate-400">
               Paid search, social, display, and programmatic campaigns. Multi-touch attribution,
@@ -126,9 +126,9 @@ export default function KineticPage() {
                 Programmatic
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">SEO & Content Strategy</h3>
             <p className="mb-4 text-sm text-slate-400">
               Technical SEO, content pillar strategy, and programmatic SEO for enterprise sites.
@@ -145,9 +145,9 @@ export default function KineticPage() {
                 Link Building
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Conversion Rate Optimization</h3>
             <p className="mb-4 text-sm text-slate-400">
               A/B testing infrastructure, experimentation roadmap, and UX optimization. Increase
@@ -164,9 +164,9 @@ export default function KineticPage() {
                 Analytics
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">
               Marketing Analytics & Attribution
             </h3>
@@ -185,7 +185,7 @@ export default function KineticPage() {
                 Dashboards
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
         </BentoGrid>
       </Section>
 

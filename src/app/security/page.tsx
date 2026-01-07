@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Shield, Lock, FileCheck, Eye, AlertTriangle, Award } from 'lucide-react';
 
 import { Section, SectionHeader } from '@/components/ui/section';
-import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
+import { BentoGrid, BentoTile } from '@/components/ui/bento-grid';
 
 export const metadata: Metadata = {
   title: 'Security & Compliance | AdaptUs Group',
@@ -121,7 +121,7 @@ export default function SecurityPage() {
         <BentoGrid className="lg:grid-cols-2">
           {securityLinks.map((link) => (
             <Link key={link.href} href={link.href}>
-              <BentoCard hover="lift" className="h-full cursor-pointer">
+              <BentoTile hover="lift" className="h-full cursor-pointer">
                 <div className="mb-4 inline-flex rounded-lg bg-slate-900 p-3 ring-1 ring-slate-800">
                   <link.icon className="h-8 w-8 text-primary" />
                 </div>
@@ -129,7 +129,7 @@ export default function SecurityPage() {
                   {link.title}
                 </h3>
                 <p className="text-sm text-slate-400">{link.description}</p>
-              </BentoCard>
+              </BentoTile>
             </Link>
           ))}
         </BentoGrid>

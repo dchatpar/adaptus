@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Brain } from 'lucide-react';
 
 import { Section, SectionHeader } from '@/components/ui/section';
-import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
+import { BentoGrid, BentoTile } from '@/components/ui/bento-grid';
 import { MagneticButton } from '@/components/ui/magnetic-button';
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default function CortexPage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoCard hover="lift">
+            <BentoTile hover="lift">
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -68,9 +68,9 @@ export default function CortexPage() {
                   <span>Compliance risks from unauditable AI decision paths</span>
                 </li>
               </ul>
-            </BentoCard>
+            </BentoTile>
 
-            <BentoCard hover="glow">
+            <BentoTile hover="glow">
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -92,7 +92,7 @@ export default function CortexPage() {
                   <span>Measured ROI tracking with guaranteed performance benchmarks</span>
                 </li>
               </ul>
-            </BentoCard>
+            </BentoTile>
           </div>
         </div>
       </Section>
@@ -107,7 +107,7 @@ export default function CortexPage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">
               Intelligent Document Processing
             </h3>
@@ -126,9 +126,9 @@ export default function CortexPage() {
                 Classification
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Predictive Analytics</h3>
             <p className="mb-4 text-sm text-slate-400">
               Forecast demand, identify risks, and optimize resource allocation using machine
@@ -145,9 +145,9 @@ export default function CortexPage() {
                 Optimization
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Process Automation</h3>
             <p className="mb-4 text-sm text-slate-400">
               Automate repetitive workflows across departments. From procurement to HR to finance,
@@ -164,9 +164,9 @@ export default function CortexPage() {
                 Integration
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Conversational AI</h3>
             <p className="mb-4 text-sm text-slate-400">
               Deploy intelligent chatbots and voice assistants for customer service, internal
@@ -183,7 +183,7 @@ export default function CortexPage() {
                 NLU
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
         </BentoGrid>
       </Section>
 

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Truck } from 'lucide-react';
 
 import { Section, SectionHeader } from '@/components/ui/section';
-import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
+import { BentoGrid, BentoTile } from '@/components/ui/bento-grid';
 import { MagneticButton } from '@/components/ui/magnetic-button';
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default function VectorPage() {
       <Section background="grid">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <BentoCard hover="lift">
+            <BentoTile hover="lift">
               <h3 className="mb-4 text-2xl font-black text-slate-50">The Problem</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -68,9 +68,9 @@ export default function VectorPage() {
                   <span>No real-time tracking across multi-modal transportation</span>
                 </li>
               </ul>
-            </BentoCard>
+            </BentoTile>
 
-            <BentoCard hover="glow">
+            <BentoTile hover="glow">
               <h3 className="mb-4 text-2xl font-black text-slate-50">Our Solution</h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
@@ -90,7 +90,7 @@ export default function VectorPage() {
                   <span>Warehouse automation and WMS integration for 99.9% accuracy</span>
                 </li>
               </ul>
-            </BentoCard>
+            </BentoTile>
           </div>
         </div>
       </Section>
@@ -105,7 +105,7 @@ export default function VectorPage() {
         />
 
         <BentoGrid className="lg:grid-cols-2">
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Route Optimization</h3>
             <p className="mb-4 text-sm text-slate-400">
               AI-powered routing algorithms for last-mile delivery, long-haul trucking, and
@@ -122,9 +122,9 @@ export default function VectorPage() {
                 AI Routing
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Warehouse Management Systems</h3>
             <p className="mb-4 text-sm text-slate-400">
               Custom WMS implementation and integration. Barcode scanning, pick/pack optimization,
@@ -141,9 +141,9 @@ export default function VectorPage() {
                 RFID
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Supply Chain Visibility</h3>
             <p className="mb-4 text-sm text-slate-400">
               Real-time tracking and visibility across your entire supply chain. IoT sensors, GPS
@@ -160,9 +160,9 @@ export default function VectorPage() {
                 Analytics
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
 
-          <BentoCard hover="lift">
+          <BentoTile hover="lift">
             <h3 className="mb-3 text-xl font-black text-slate-50">Demand Forecasting</h3>
             <p className="mb-4 text-sm text-slate-400">
               Machine learning models to predict demand, optimize inventory levels, and prevent
@@ -179,7 +179,7 @@ export default function VectorPage() {
                 Inventory
               </span>
             </div>
-          </BentoCard>
+          </BentoTile>
         </BentoGrid>
       </Section>
 
