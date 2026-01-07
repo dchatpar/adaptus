@@ -11,7 +11,6 @@ import {
   Globe,
   Brain,
   Clock,
-  Target,
   Package,
   Database,
   Cog,

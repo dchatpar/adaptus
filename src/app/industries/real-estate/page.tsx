@@ -12,7 +12,6 @@ import {
   CheckCircle2,
   ArrowRight,
   Globe,
-  Smartphone,
   BarChart3,
   Key,
   Camera,
@@ -46,6 +45,7 @@ export default function RealEstatePage() {
       color: '#F2A71B',
     },
     {
+      icon: FileText,
       title: 'Manual Processes',
       problem: 'Paper-heavy workflows slow down transactions',
       impact: 'Average agent spends 40% of time on administrative tasks',
@@ -79,6 +79,7 @@ export default function RealEstatePage() {
       color: '#9AE66E',
     },
     {
+      icon: Shield,
       title: 'Transaction Management',
       description: 'End-to-end digital workflow from offer to closing',
       features: ['E-signatures', 'Document automation', 'Compliance tracking'],
