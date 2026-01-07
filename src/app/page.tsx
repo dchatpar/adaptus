@@ -1,13 +1,13 @@
-import { Hero } from '@/components/home/hero';
-import { Divisions } from '@/components/home/divisions';
+import { EnhancedHero } from '@/components/home/enhanced-hero';
+import { BentoEcosystem } from '@/components/home/bento-ecosystem';
 import { About } from '@/components/home/about';
 import { CTA } from '@/components/home/cta';
 
 export default function HomePage() {
   return (
     <main>
-      <Hero />
-      <Divisions />
+      <EnhancedHero />
+      <BentoEcosystem />
       <About />
       <CTA />
     </main>
