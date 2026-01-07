@@ -108,15 +108,16 @@ async function main() {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+    if (!line) continue;
 
     if (line.includes('title: "')) {
       const m = line.match(/title:\s*"([^"]+)"/);
-      if (m) currentTitle = m[1];
+      if (m && m[1]) currentTitle = m[1];
     }
 
     if (line.includes('slug: "')) {
       const m = line.match(/slug:\s*"([^"]+)"/);
-      if (m) currentSlug = m[1];
+      if (m && m[1]) currentSlug = m[1];
     }
 
     if (
@@ -136,7 +137,7 @@ async function main() {
         if (isPlaceholder) {
           // Get the exact value being replaced
           const imageValueMatch = line.match(/image:\s*(.+),?/);
-          if (imageValueMatch) {
+          if (imageValueMatch && imageValueMatch[1]) {
             replacements.push({
               slug: currentSlug,
               title: currentTitle,
