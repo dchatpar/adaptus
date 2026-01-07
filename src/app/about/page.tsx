@@ -13,7 +13,6 @@ import {
   Zap,
   Shield,
   Brain,
-  CheckCircle2,
   MapPin,
   Calendar,
   Briefcase,
