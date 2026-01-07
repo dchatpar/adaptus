@@ -1,128 +1,181 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
-
-import { MagneticButton } from '@/components/ui/magnetic-button';
-import { COMPANY_INFO } from '@/lib/constants';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
+import { ArrowRight, Sparkles, Zap } from 'lucide-react';
+import Image from 'next/image';
+import { useRef } from 'react';
 
 export function EnhancedHero() {
-  const scrollToDivisions = () => {
-    document.getElementById('divisions')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Grid Pattern Background */}
-      <div className="absolute inset-0 grid-pattern opacity-50" />
+    <section ref={ref} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background">
+      {/* Animated Background Image with Parallax */}
+      <motion.div
+        style={{ y }}
+        className="absolute inset-0 z-0"
+      >
+        <Image
+          src="/images/hero/modern_technology_hero_backgro_bing_0001_af91aed6.jpeg"
+          alt="Modern Technology Background"
+          fill
+          className="object-cover opacity-20"
+          priority
+          quality={95}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+      </motion.div>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
-      {/* Noise Texture */}
-      <div
-        className="absolute inset-0 opacity-[0.015]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+      {/* Floating Orbs */}
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.6, 0.3],
         }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+        className="absolute top-20 right-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{
+          scale: [1.2, 1, 1.2],
+          opacity: [0.2, 0.5, 0.2],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+        className="absolute bottom-20 left-20 w-96 h-96 bg-accent-gold/20 rounded-full blur-3xl"
       />
 
-      {/* Content */}
-      <div className="container relative z-10 py-32">
+      <motion.div style={{ opacity }} className="container relative z-10 py-32">
         <div className="mx-auto max-w-5xl text-center">
-          {/* Subtitle with stagger */}
-          <motion.p
+          {/* Badge */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-6 text-sm font-bold uppercase tracking-wider text-primary"
+            transition={{ duration: 0.6 }}
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm"
           >
-            Est. {COMPANY_INFO.founded} • {COMPANY_INFO.headquarters}
-          </motion.p>
+            <Sparkles className="h-5 w-5 text-primary" />
+            <span className="text-sm font-semibold text-primary">Enterprise-Grade Solutions</span>
+          </motion.div>
 
-          {/* Main Heading with split-text effect */}
+          {/* Main Heading with Gradient */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl lg:text-8xl"
           >
-            <span className="block text-6xl font-black tracking-tight text-slate-50 md:text-8xl">
-              {COMPANY_INFO.name.split(' ')[0]}
-            </span>
-            <span className="block text-gradient text-5xl font-black tracking-tight md:text-7xl">
-              {COMPANY_INFO.name.split(' ').slice(1).join(' ')}
+            Transform Your Business with{' '}
+            <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">
+              AI-Powered Innovation
             </span>
           </motion.h1>
 
-          {/* Tagline */}
+          {/* Subtitle */}
           <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-slate-300 md:text-2xl"
+          >
+            Six specialized divisions delivering cutting-edge software, AI, and digital transformation
+            solutions across industries. From concept to deployment, we build the future.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-8 text-2xl font-bold text-slate-300 md:text-4xl"
+            className="flex flex-col gap-4 sm:flex-row sm:justify-center"
           >
-            {COMPANY_INFO.tagline}
-          </motion.p>
+            <Link
+              href="/contact"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60"
+            >
+              <Zap className="h-5 w-5" />
+              Start Your Project
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800"
+            >
+              View Case Studies
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </motion.div>
 
-          {/* Description */}
-          <motion.p
+          {/* Stats Bar */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-12 text-lg text-slate-400 leading-relaxed max-w-3xl mx-auto"
+            className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4"
           >
-            A global enterprise technology holding company delivering specialized solutions across
-            AI, cybersecurity, software development, marketing, talent, and logistics.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col gap-4 sm:flex-row sm:justify-center"
-          >
-            <MagneticButton onClick={scrollToDivisions}>Explore Divisions</MagneticButton>
-            <MagneticButton
-              onClick={() => (window.location.href = '/contact')}
-              className="bg-transparent border-2 border-slate-700 hover:bg-slate-800"
-            >
-              Contact Us
-            </MagneticButton>
-          </motion.div>
-
-          {/* Global Locations */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-16 flex flex-wrap justify-center gap-6 text-sm text-slate-500"
-          >
-            {COMPANY_INFO.locations.map((location) => (
-              <div key={location} className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-                <span>{location}</span>
-              </div>
+            {[
+              { value: '500+', label: 'Projects Delivered' },
+              { value: '98%', label: 'Client Satisfaction' },
+              { value: '6', label: 'Specialized Divisions' },
+              { value: '24/7', label: 'Global Support' },
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 backdrop-blur-sm"
+              >
+                <div className="mb-1 text-3xl font-black bg-gradient-to-r from-primary to-accent-gold bg-clip-text text-transparent">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-slate-400">{stat.label}</div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Scroll Indicator */}
-      <motion.button
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
-        onClick={scrollToDivisions}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 transition-colors hover:text-primary"
-        aria-label="Scroll to divisions"
+        transition={{ delay: 1, duration: 0.6 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <span className="text-xs font-semibold uppercase tracking-wider">Scroll</span>
-        <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
-          <ChevronDown className="h-5 w-5" />
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="flex flex-col items-center gap-2 text-slate-400"
+        >
+          <span className="text-sm">Scroll to explore</span>
+          <div className="h-8 w-5 rounded-full border-2 border-slate-600">
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="mx-auto mt-1 h-2 w-1 rounded-full bg-primary"
+            />
+          </div>
         </motion.div>
-      </motion.button>
+      </motion.div>
     </section>
   );
 }
