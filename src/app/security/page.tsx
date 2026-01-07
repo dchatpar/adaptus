@@ -69,15 +69,18 @@ export default function SecurityPage() {
               transparency on our security posture.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <MagneticButton onClick={() => (window.location.href = '/security/assurance')}>
+              <Link
+                href="/security/assurance"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105"
+              >
                 Request Security Documentation
-              </MagneticButton>
-              <MagneticButton
-                onClick={() => (window.location.href = '/security/compliance')}
-                className="bg-transparent border-2 border-slate-700 hover:bg-slate-800"
+              </Link>
+              <Link
+                href="/security/compliance"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-slate-700 bg-transparent px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-slate-800"
               >
                 View Compliance Status
-              </MagneticButton>
+              </Link>
             </div>
           </div>
         </div>
@@ -194,9 +197,12 @@ export default function SecurityPage() {
               Our security team is available to discuss our controls, provide audit reports, and
               answer technical security questions.
             </p>
-            <MagneticButton onClick={() => (window.location.href = '/contact')}>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105"
+            >
               Contact Security Team
-            </MagneticButton>
+            </Link>
           </div>
         </div>
       </Section>
