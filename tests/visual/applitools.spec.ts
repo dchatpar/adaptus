@@ -1,4 +1,4 @@
-import { test as base, expect } from '@playwright/test';
+import { test as base } from '@playwright/test';
 import { Eyes, Target, Configuration, BatchInfo } from '@applitools/eyes-playwright';
 
 type ApplitoolsFixtures = {
@@ -71,7 +71,14 @@ test.describe('Applitools Visual AI Tests', () => {
 });
 
 test.describe('Industry Pages Applitools Tests', () => {
-  const industries = ['enterprise-saas', 'finance', 'logistics', 'manufacturing', 'real-estate', 'retail'];
+  const industries = [
+    'enterprise-saas',
+    'finance',
+    'logistics',
+    'manufacturing',
+    'real-estate',
+    'retail',
+  ];
 
   for (const industry of industries) {
     test(`${industry} page layout validation`, async ({ page, eyes }) => {
