@@ -425,21 +425,21 @@ export default function HomePage() {
                 industry: 'Finance',
                 metrics: ['40% faster delivery', '100% security compliance', '$2.5M cost savings'],
                 image:
-                  '/images/homepage/case-studies/finance_technology_fintech_tradin_bing_0001_7c8d9e2f.webp',
+                  '/images/industries/finance/financial_trading_floor_bankin_bing_0002_71253cf7.webp',
               },
               {
                 title: 'Global Logistics Optimization',
                 industry: 'Logistics',
                 metrics: ['98% on-time delivery', '100k+ shipments/month', '35% cost reduction'],
                 image:
-                  '/images/homepage/case-studies/logistics_warehouse_supply_chain_bing_0001_a4b5c6d7.webp',
+                  '/images/industries/logistics/warehouse_logistics_distributi_bing_0001_73ca0084.webp',
               },
               {
                 title: 'AI-Powered Customer Service',
                 industry: 'Enterprise SaaS',
                 metrics: ['85% automation rate', '60% faster response', '4.8/5 satisfaction'],
                 image:
-                  '/images/homepage/case-studies/customer_service_ai_chatbot_supp_bing_0001_e8f9g0h1.webp',
+                  '/images/industries/saas/enterprise_saas_software_platf_bing_0002_c68f4dc4.webp',
               },
             ].map((study, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -603,18 +603,24 @@ export default function HomePage() {
                 author: 'Sarah Chen',
                 role: 'CTO, Global Fintech Corp',
                 rating: 5,
+                avatar:
+                  '/images/testimonials/professional_business_team_por_bing_0004_8d686548.webp',
               },
               {
                 quote: 'The AI agents they built saved us $2M annually. ROI was immediate.',
                 author: 'Michael Rodriguez',
                 role: 'VP Engineering, Enterprise SaaS',
                 rating: 5,
+                avatar:
+                  '/images/testimonials/professional_business_team_por_bing_0005_672f662a.webp',
               },
               {
                 quote: 'Best-in-class security and compliance. We sleep better at night.',
                 author: 'Emily Thompson',
                 role: 'CISO, Healthcare Platform',
                 rating: 5,
+                avatar:
+                  '/images/testimonials/professional_business_team_por_bing_0006_5a7d6178.webp',
               },
             ].map((testimonial, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -627,9 +633,19 @@ export default function HomePage() {
 
                   <p className="mb-6 text-lg text-white/90">&ldquo;{testimonial.quote}&rdquo;</p>
 
-                  <div>
-                    <div className="font-bold text-white">{testimonial.author}</div>
-                    <div className="text-sm text-white/60">{testimonial.role}</div>
+                  <div className="flex items-center gap-4">
+                    <div className="relative h-12 w-12 overflow-hidden rounded-full">
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.author}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <div className="font-bold text-white">{testimonial.author}</div>
+                      <div className="text-sm text-white/60">{testimonial.role}</div>
+                    </div>
                   </div>
                 </GlassPanel>
               </ScrollReveal>
