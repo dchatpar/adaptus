@@ -112,7 +112,8 @@ export default function RealEstatePage() {
     company: 'Boutique Real Estate Brokerage',
     industry: 'Residential Real Estate',
     challenge: '23 agents, 180 listings/year, 89-day average sale time, 3.1% lead conversion',
-    solution: 'Implemented CORTEX™ lead scoring + KINETIC™ marketing automation + FORGE™ virtual tours',
+    solution:
+      'Implemented CORTEX™ lead scoring + KINETIC™ marketing automation + FORGE™ virtual tours',
     results: [
       { metric: '51 days', label: 'Average sale time (down from 89)' },
       { metric: '8.7%', label: 'Lead conversion rate (up from 3.1%)' },
@@ -204,32 +205,73 @@ export default function RealEstatePage() {
 
   return (
     <>
-      <section ref={heroRef} className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background">
+      <section
+        ref={heroRef}
+        className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background"
+      >
         <motion.div style={{ y }} className="absolute inset-0 z-0">
-          <Image src="/images/industries/real-estate/modern_real_estate_luxury_prop_bing_0001_f309b1c5.jpeg" alt="Luxury Real Estate" fill className="object-cover opacity-20" priority quality={90} />
+          <Image
+            src="/images/industries/real-estate/modern_real_estate_luxury_prop_bing_0001_f309b1c5.jpeg"
+            alt="Luxury Real Estate"
+            fill
+            className="object-cover opacity-20"
+            priority
+            quality={90}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </motion.div>
         <div className="absolute inset-0 grid-pattern opacity-20" />
         <motion.div style={{ opacity }} className="container relative z-10 py-24">
           <div className="mx-auto max-w-4xl text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm"
+            >
               <Home className="h-5 w-5 text-primary" />
-              <span className="text-sm font-semibold text-primary">Real Estate & PropTech Solutions</span>
+              <span className="text-sm font-semibold text-primary">
+                Real Estate & PropTech Solutions
+              </span>
             </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl"
+            >
               Transform Real Estate{' '}
-              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">With Digital Innovation</span>
+              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">
+                With Digital Innovation
+              </span>
             </motion.h1>
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl">
-              Close deals 50% faster, reduce operational costs by 40%, and deliver exceptional client experiences with modern PropTech.
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl"
+            >
+              Close deals 50% faster, reduce operational costs by 40%, and deliver exceptional
+              client experiences with modern PropTech.
             </motion.p>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Link href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col gap-4 sm:flex-row sm:justify-center"
+            >
+              <Link
+                href="#solutions"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60"
+              >
                 <Zap className="h-5 w-5" />
                 Explore Solutions
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link href="#case-study" className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800">
+              <Link
+                href="#case-study"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800"
+              >
                 <BarChart3 className="h-5 w-5" />
                 View Case Study
               </Link>
@@ -493,9 +535,7 @@ export default function RealEstatePage() {
         <div className="container">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-5xl font-bold text-white">Technology Stack</h2>
-            <p className="text-xl text-slate-400">
-              Industry-leading platforms we integrate
-            </p>
+            <p className="text-xl text-slate-400">Industry-leading platforms we integrate</p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {techStack.map((tech, index) => (
@@ -523,9 +563,7 @@ export default function RealEstatePage() {
         <div className="container">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-5xl font-bold text-white">Related Services</h2>
-            <p className="text-xl text-slate-400">
-              Comprehensive solutions across our divisions
-            </p>
+            <p className="text-xl text-slate-400">Comprehensive solutions across our divisions</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             <Link
@@ -562,9 +600,7 @@ export default function RealEstatePage() {
             >
               <Camera className="mb-4 h-12 w-12 text-forge" />
               <h3 className="mb-2 text-2xl font-bold text-white">ADAPTUS FORGE™</h3>
-              <p className="mb-4 text-slate-400">
-                Virtual tours and property marketing technology
-              </p>
+              <p className="mb-4 text-slate-400">Virtual tours and property marketing technology</p>
               <div className="flex items-center gap-2 text-forge">
                 <span className="font-semibold">Learn More</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -574,34 +610,375 @@ export default function RealEstatePage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section">
-        <div className="container">
-          <div className="rounded-2xl border border-accent-gold/30 bg-accent-gold/5 p-16 text-center">
-            <Home className="mx-auto mb-6 h-20 w-20 text-accent-gold" />
-            <h2 className="mb-4 text-4xl font-bold text-white">
-              Ready to Transform Your Real Estate Business?
+      {/* CTA Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-primary py-24">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.2),transparent)]" />
+        </div>
+        <div className="container relative z-10 mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl"
+          >
+            <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
+              Transform Your Real Estate Business
             </h2>
-            <p className="mb-8 text-xl text-slate-300">
-              Schedule a free consultation with our real estate technology experts
+            <p className="mb-8 text-xl text-white/90">
+              Join 400+ real estate firms achieving 50% faster sales with AdaptUs
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="/contact?industry=real-estate"
-                className="inline-flex items-center gap-2 rounded-lg bg-accent-gold px-8 py-4 text-lg font-semibold text-background transition-all hover:scale-105"
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 font-bold text-primary transition-all hover:scale-105 hover:shadow-2xl"
               >
-                <Users className="h-5 w-5" />
-                Schedule Consultation
+                Schedule Demo
+                <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
-                href="/divisions/kinetic"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-accent-gold px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-accent-gold/10"
+                href="/case-studies"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white bg-transparent px-8 py-4 font-bold text-white transition-all hover:bg-white hover:text-primary"
               >
-                <Globe className="h-5 w-5" />
-                Explore KINETIC Division
+                View Case Studies
               </Link>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Implementation Roadmap */}
+      <section className="bg-background py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-foreground md:text-5xl">
+              90-Day Digital Transformation
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
+              From traditional to cutting-edge real estate technology
+            </p>
           </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {[
+              {
+                phase: 'Phase 1: Foundation',
+                duration: '0-30 Days',
+                icon: BarChart3,
+                color: '#6366f1',
+                steps: [
+                  'Property data migration',
+                  'CRM integration',
+                  'Virtual tour setup',
+                  'Website modernization',
+                  'Lead capture optimization',
+                  'Team training program',
+                ],
+                deliverables: [
+                  'Unified property database',
+                  'Integrated CRM',
+                  'Virtual tour platform',
+                  'Modern website',
+                ],
+              },
+              {
+                phase: 'Phase 2: Activation',
+                duration: '31-60 Days',
+                icon: Zap,
+                color: '#8b5cf6',
+                steps: [
+                  'Marketing automation',
+                  'AI property matching',
+                  'Smart scheduling',
+                  'Client portal launch',
+                  'Analytics dashboard',
+                  'Mobile app deployment',
+                ],
+                deliverables: [
+                  'Automated marketing',
+                  'AI recommendations',
+                  'Booking system',
+                  'Client access',
+                ],
+              },
+              {
+                phase: 'Phase 3: Scale',
+                duration: '61-90 Days',
+                icon: TrendingUp,
+                color: '#ec4899',
+                steps: [
+                  'Predictive analytics',
+                  'Market intelligence',
+                  'Portfolio optimization',
+                  'Multi-office expansion',
+                  'Advanced reporting',
+                  'Continuous improvement',
+                ],
+                deliverables: [
+                  'Full automation',
+                  'Market insights',
+                  'Scalable platform',
+                  'Enterprise features',
+                ],
+              },
+            ].map((phase, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div
+                  className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl"
+                  style={{ backgroundColor: `${phase.color}20` }}
+                >
+                  <phase.icon className="h-8 w-8" style={{ color: phase.color }} />
+                </div>
+                <div className="mb-2 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                  {phase.duration}
+                </div>
+                <h3 className="mb-6 text-2xl font-black text-foreground">{phase.phase}</h3>
+                <div className="mb-6">
+                  <h4 className="mb-3 text-sm font-bold uppercase text-muted-foreground">
+                    Key Activities
+                  </h4>
+                  <ul className="space-y-2">
+                    {phase.steps.map((step, j) => (
+                      <li key={j} className="flex items-start gap-2 text-foreground">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-500" />
+                        <span className="text-sm">{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="mb-3 text-sm font-bold uppercase text-muted-foreground">
+                    Deliverables
+                  </h4>
+                  <ul className="space-y-2">
+                    {phase.deliverables.map((del, j) => (
+                      <li key={j} className="flex items-start gap-2 text-foreground">
+                        <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-500" />
+                        <span className="text-sm">{del}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="bg-surface py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-foreground md:text-5xl">
+              Flexible Real Estate Pricing
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
+              Scale from boutique to enterprise
+            </p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {[
+              {
+                name: 'Boutique',
+                price: '$2,500',
+                period: '/month',
+                description: 'For independent agents & small teams',
+                features: [
+                  'Up to 100 listings',
+                  'Virtual tours',
+                  'Basic CRM',
+                  'Lead capture',
+                  'Email support (24h)',
+                  'Monthly reports',
+                  'Standard integrations',
+                ],
+                cta: 'Start Trial',
+                highlight: false,
+              },
+              {
+                name: 'Professional',
+                price: '$8,500',
+                period: '/month',
+                description: 'For growing real estate firms',
+                features: [
+                  'Up to 1,000 listings',
+                  'Advanced virtual tours',
+                  'Full CRM suite',
+                  'AI property matching',
+                  'Priority support (4h)',
+                  'Weekly analytics',
+                  'Custom integrations',
+                  'Client portal',
+                  'Marketing automation',
+                ],
+                cta: 'Schedule Demo',
+                highlight: true,
+              },
+              {
+                name: 'Enterprise',
+                price: 'Custom',
+                period: 'pricing',
+                description: 'For large real estate organizations',
+                features: [
+                  'Unlimited listings',
+                  'White-label platform',
+                  'Dedicated team (1h SLA)',
+                  'Predictive analytics',
+                  'Multi-office support',
+                  'Custom development',
+                  'Advanced compliance',
+                  'API access',
+                  '24/7 support',
+                ],
+                cta: 'Contact Sales',
+                highlight: false,
+              },
+            ].map((tier, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`relative rounded-2xl p-8 ${tier.highlight ? 'border-2 border-primary bg-gradient-to-br from-primary/10 to-accent/10 shadow-2xl' : 'border border-border bg-card'}`}
+              >
+                {tier.highlight && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-1 text-sm font-bold text-white">
+                    Most Popular
+                  </div>
+                )}
+                <div className="mb-6">
+                  <h3 className="mb-2 text-2xl font-black text-foreground">{tier.name}</h3>
+                  <p className="text-sm text-muted-foreground">{tier.description}</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-black text-foreground">{tier.price}</span>
+                    <span className="text-muted-foreground">{tier.period}</span>
+                  </div>
+                </div>
+                <Link
+                  href="/contact"
+                  className={`mb-8 block w-full rounded-xl py-3 text-center font-bold transition-all ${tier.highlight ? 'bg-gradient-to-r from-primary to-accent text-white hover:scale-105 hover:shadow-2xl' : 'border-2 border-border text-foreground hover:border-primary hover:bg-secondary'}`}
+                >
+                  {tier.cta}
+                </Link>
+                <ul className="space-y-3">
+                  {tier.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                      <span className="text-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-12 text-center text-sm text-muted-foreground">
+            All plans include: 99.99% uptime SLA, regular updates, and data security
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-background py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-foreground md:text-5xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
+              Everything about real estate technology
+            </p>
+          </div>
+          <div className="mx-auto max-w-4xl space-y-6">
+            {[
+              {
+                q: 'How quickly can we see results?',
+                a: 'Most real estate firms see measurable improvements within 2-3 weeks. Early wins include better lead capture and virtual tour engagement. Full transformation typically occurs by 90 days with 40-50% faster sales cycles, 60% more qualified leads, and 35% higher conversion rates.',
+              },
+              {
+                q: 'Do virtual tours really increase sales?',
+                a: 'Yes! Properties with virtual tours sell 50% faster and attract 3x more qualified leads. Our platform creates immersive 3D tours, video walkthroughs, and interactive floor plans that engage buyers 24/7. Virtual tours also reduce unnecessary showings by 40%, saving time for agents.',
+              },
+              {
+                q: 'Can you integrate with our existing systems?',
+                a: 'Absolutely! We integrate with major real estate platforms including MLS systems, Zillow, Realtor.com, DocuSign, and popular CRMs like Salesforce and HubSpot. Our API-first approach allows custom integrations with any platform. Professional and Enterprise plans include dedicated integration support.',
+              },
+              {
+                q: 'What about data migration?',
+                a: 'We handle all data migration from your existing systems with zero downtime. Our team migrates property listings, client data, documents, and historical records. We ensure data integrity and provide validation reports. Most migrations complete within 1-2 weeks with full support.',
+              },
+              {
+                q: 'How does AI property matching work?',
+                a: 'Our AI analyzes buyer preferences, search history, budget, and behavior to recommend perfect property matches. The system learns from interactions and improves over time. Agents see 60% higher engagement with AI-matched properties and close deals 35% faster through better targeting.',
+              },
+              {
+                q: 'Is the platform mobile-friendly?',
+                a: 'Yes! Our platform includes native iOS and Android apps for agents and a responsive web portal for clients. Agents can manage listings, schedule showings, and communicate with clients on-the-go. Clients can browse properties, book tours, and track their search from any device.',
+              },
+              {
+                q: 'What about security and compliance?',
+                a: 'We maintain SOC 2 Type II certification and comply with all real estate regulations including RESPA, Fair Housing Act, and state-specific requirements. All data is encrypted at rest and in transit. We offer secure document signing, audit trails, and regular security audits.',
+              },
+              {
+                q: 'Do you provide training and support?',
+                a: 'All plans include comprehensive training for your team, regular platform updates, and ongoing support. Professional and Enterprise clients get dedicated account managers, priority support, and access to our real estate technology experts for strategic guidance and best practices.',
+              },
+            ].map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary"
+              >
+                <h3 className="mb-3 text-xl font-bold text-foreground">{faq.q}</h3>
+                <p className="leading-relaxed text-foreground">{faq.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-gradient-to-br from-surface to-background py-24">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl"
+          >
+            <h2 className="mb-6 text-4xl font-black text-foreground md:text-5xl">
+              Ready to Transform Real Estate?
+            </h2>
+            <p className="mb-8 text-xl text-muted-foreground">
+              Join 400+ firms achieving 50% faster sales
+            </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 py-4 font-bold text-white transition-all hover:scale-105 hover:shadow-2xl"
+              >
+                Get Started Today
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-primary px-8 py-4 font-bold text-foreground transition-all hover:bg-primary/10"
+              >
+                View Success Stories
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>

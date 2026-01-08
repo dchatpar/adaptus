@@ -34,7 +34,6 @@ export default function RetailPage() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-
   const challenges = [
     {
       icon: Users,
@@ -78,7 +77,8 @@ export default function RetailPage() {
     {
       icon: ShoppingCart,
       title: 'Conversion Optimization',
-      description: 'A/B testing, UX improvements, and checkout optimization to reduce cart abandonment',
+      description:
+        'A/B testing, UX improvements, and checkout optimization to reduce cart abandonment',
       features: ['One-click checkout', 'Guest checkout', 'Cart recovery emails'],
       division: 'ADAPTUS KINETIC™',
       color: '#9AE66E',
@@ -94,7 +94,8 @@ export default function RetailPage() {
     {
       icon: Shield,
       title: 'Secure Payment Processing',
-      description: 'PCI-DSS compliant payment gateway with fraud detection and chargeback protection',
+      description:
+        'PCI-DSS compliant payment gateway with fraud detection and chargeback protection',
       features: ['Multi-currency support', 'Fraud detection', 'Subscription billing'],
       division: 'ADAPTUS SENTINEL™',
       color: '#1565C0',
@@ -204,32 +205,73 @@ export default function RetailPage() {
 
   return (
     <>
-      <section ref={heroRef} className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background">
+      <section
+        ref={heroRef}
+        className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-surface to-background"
+      >
         <motion.div style={{ y }} className="absolute inset-0 z-0">
-          <Image src="/images/industries/retail/retail_store_ecommerce_shoppin_bing_0001_90e1c27a.webp" alt="Retail Store" fill className="object-cover opacity-20" priority quality={90} />
+          <Image
+            src="/images/industries/retail/retail_store_ecommerce_shoppin_bing_0001_90e1c27a.webp"
+            alt="Retail Store"
+            fill
+            className="object-cover opacity-20"
+            priority
+            quality={90}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </motion.div>
         <div className="absolute inset-0 grid-pattern opacity-20" />
         <motion.div style={{ opacity }} className="container relative z-10 py-24">
           <div className="mx-auto max-w-4xl text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-6 py-3 backdrop-blur-sm"
+            >
               <ShoppingCart className="h-5 w-5 text-primary" />
-              <span className="text-sm font-semibold text-primary">Retail & E-commerce Solutions</span>
+              <span className="text-sm font-semibold text-primary">
+                Retail & E-commerce Solutions
+              </span>
             </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-6 text-6xl font-black leading-tight tracking-tight text-white md:text-7xl"
+            >
               Revolutionize Retail{' '}
-              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">With Omnichannel Excellence</span>
+              <span className="bg-gradient-to-r from-primary via-accent-gold to-kinetic bg-clip-text text-transparent">
+                With Omnichannel Excellence
+              </span>
             </motion.h1>
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl">
-              Boost conversion rates by 65%, increase customer lifetime value by 3x, and deliver personalized experiences at scale.
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl"
+            >
+              Boost conversion rates by 65%, increase customer lifetime value by 3x, and deliver
+              personalized experiences at scale.
             </motion.p>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Link href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col gap-4 sm:flex-row sm:justify-center"
+            >
+              <Link
+                href="#solutions"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/60"
+              >
                 <Zap className="h-5 w-5" />
                 Explore Solutions
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link href="#case-study" className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800">
+              <Link
+                href="#case-study"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-primary hover:bg-slate-800"
+              >
                 <BarChart3 className="h-5 w-5" />
                 View Case Study
               </Link>
@@ -336,9 +378,7 @@ export default function RetailPage() {
         <div className="container">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-5xl font-bold text-white">Proven Results</h2>
-            <p className="text-xl text-slate-400">
-              Average improvements across our retail clients
-            </p>
+            <p className="text-xl text-slate-400">Average improvements across our retail clients</p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {metrics.map((metric, index) => (
@@ -493,9 +533,7 @@ export default function RetailPage() {
         <div className="container">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-5xl font-bold text-white">Technology Stack</h2>
-            <p className="text-xl text-slate-400">
-              Best-in-class platforms we integrate
-            </p>
+            <p className="text-xl text-slate-400">Best-in-class platforms we integrate</p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {techStack.map((tech, index) => (
@@ -523,9 +561,7 @@ export default function RetailPage() {
         <div className="container">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-5xl font-bold text-white">Related Services</h2>
-            <p className="text-xl text-slate-400">
-              Comprehensive solutions across our divisions
-            </p>
+            <p className="text-xl text-slate-400">Comprehensive solutions across our divisions</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             <Link
@@ -534,9 +570,7 @@ export default function RetailPage() {
             >
               <TrendingUp className="mb-4 h-12 w-12 text-kinetic" />
               <h3 className="mb-2 text-2xl font-bold text-white">ADAPTUS KINETIC™</h3>
-              <p className="mb-4 text-slate-400">
-                Digital marketing and conversion optimization
-              </p>
+              <p className="mb-4 text-slate-400">Digital marketing and conversion optimization</p>
               <div className="flex items-center gap-2 text-kinetic">
                 <span className="font-semibold">Learn More</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -548,9 +582,7 @@ export default function RetailPage() {
             >
               <Brain className="mb-4 h-12 w-12 text-cortex" />
               <h3 className="mb-2 text-2xl font-bold text-white">ADAPTUS CORTEX™</h3>
-              <p className="mb-4 text-slate-400">
-                AI-powered personalization and recommendations
-              </p>
+              <p className="mb-4 text-slate-400">AI-powered personalization and recommendations</p>
               <div className="flex items-center gap-2 text-cortex">
                 <span className="font-semibold">Learn More</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -562,9 +594,7 @@ export default function RetailPage() {
             >
               <Smartphone className="mb-4 h-12 w-12 text-forge" />
               <h3 className="mb-2 text-2xl font-bold text-white">ADAPTUS FORGE™</h3>
-              <p className="mb-4 text-slate-400">
-                Custom ecommerce platform development
-              </p>
+              <p className="mb-4 text-slate-400">Custom ecommerce platform development</p>
               <div className="flex items-center gap-2 text-forge">
                 <span className="font-semibold">Learn More</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -574,34 +604,375 @@ export default function RetailPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section">
-        <div className="container">
-          <div className="rounded-2xl border border-kinetic/30 bg-kinetic/5 p-16 text-center">
-            <ShoppingCart className="mx-auto mb-6 h-20 w-20 text-kinetic" />
-            <h2 className="mb-4 text-4xl font-bold text-white">
-              Ready to Scale Your Ecommerce Business?
+      {/* CTA Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-primary py-24">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.2),transparent)]" />
+        </div>
+        <div className="container relative z-10 mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl"
+          >
+            <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
+              Scale Your Retail Business
             </h2>
-            <p className="mb-8 text-xl text-slate-300">
-              Schedule a free consultation with our ecommerce growth experts
+            <p className="mb-8 text-xl text-white/90">
+              Join 500+ retailers achieving 3x revenue growth with AdaptUs
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="/contact?division=kinetic"
-                className="inline-flex items-center gap-2 rounded-lg bg-kinetic px-8 py-4 text-lg font-semibold text-background transition-all hover:scale-105"
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 font-bold text-primary transition-all hover:scale-105 hover:shadow-2xl"
               >
-                <Users className="h-5 w-5" />
-                Schedule Consultation
+                Schedule Demo
+                <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
-                href="/divisions/kinetic"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-kinetic px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-kinetic/10"
+                href="/case-studies"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white bg-transparent px-8 py-4 font-bold text-white transition-all hover:bg-white hover:text-primary"
               >
-                <Globe className="h-5 w-5" />
-                Explore KINETIC Division
+                View Case Studies
               </Link>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Implementation Roadmap */}
+      <section className="bg-background py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-foreground md:text-5xl">
+              90-Day Growth Roadmap
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
+              From traditional retail to omnichannel excellence
+            </p>
           </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {[
+              {
+                phase: 'Phase 1: Foundation',
+                duration: '0-30 Days',
+                icon: BarChart3,
+                color: '#6366f1',
+                steps: [
+                  'Inventory system integration',
+                  'POS modernization',
+                  'Ecommerce platform setup',
+                  'Customer data unification',
+                  'Analytics implementation',
+                  'Staff training program',
+                ],
+                deliverables: [
+                  'Unified inventory',
+                  'Modern POS',
+                  'Online store',
+                  'Customer database',
+                ],
+              },
+              {
+                phase: 'Phase 2: Growth',
+                duration: '31-60 Days',
+                icon: Zap,
+                color: '#8b5cf6',
+                steps: [
+                  'Omnichannel activation',
+                  'Personalization engine',
+                  'Loyalty program launch',
+                  'Marketing automation',
+                  'Mobile app deployment',
+                  'Supply chain optimization',
+                ],
+                deliverables: [
+                  'Seamless omnichannel',
+                  'AI personalization',
+                  'Active loyalty program',
+                  'Automated marketing',
+                ],
+              },
+              {
+                phase: 'Phase 3: Scale',
+                duration: '61-90 Days',
+                icon: TrendingUp,
+                color: '#ec4899',
+                steps: [
+                  'Predictive inventory',
+                  'Advanced analytics',
+                  'Multi-location expansion',
+                  'Marketplace integration',
+                  'Customer experience optimization',
+                  'Continuous innovation',
+                ],
+                deliverables: [
+                  'Smart inventory',
+                  'Full analytics',
+                  'Scalable operations',
+                  'Marketplace presence',
+                ],
+              },
+            ].map((phase, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div
+                  className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl"
+                  style={{ backgroundColor: `${phase.color}20` }}
+                >
+                  <phase.icon className="h-8 w-8" style={{ color: phase.color }} />
+                </div>
+                <div className="mb-2 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                  {phase.duration}
+                </div>
+                <h3 className="mb-6 text-2xl font-black text-foreground">{phase.phase}</h3>
+                <div className="mb-6">
+                  <h4 className="mb-3 text-sm font-bold uppercase text-muted-foreground">
+                    Key Activities
+                  </h4>
+                  <ul className="space-y-2">
+                    {phase.steps.map((step, j) => (
+                      <li key={j} className="flex items-start gap-2 text-foreground">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-500" />
+                        <span className="text-sm">{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="mb-3 text-sm font-bold uppercase text-muted-foreground">
+                    Deliverables
+                  </h4>
+                  <ul className="space-y-2">
+                    {phase.deliverables.map((del, j) => (
+                      <li key={j} className="flex items-start gap-2 text-foreground">
+                        <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-500" />
+                        <span className="text-sm">{del}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="bg-surface py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-foreground md:text-5xl">
+              Flexible Retail Pricing
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
+              Scale from single store to enterprise chain
+            </p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {[
+              {
+                name: 'Starter',
+                price: '$1,500',
+                period: '/month',
+                description: 'For single-location retailers',
+                features: [
+                  '1 location',
+                  'Basic POS',
+                  'Inventory management',
+                  'Customer database',
+                  'Email support (24h)',
+                  'Monthly reports',
+                  'Standard integrations',
+                ],
+                cta: 'Start Trial',
+                highlight: false,
+              },
+              {
+                name: 'Growth',
+                price: '$6,500',
+                period: '/month',
+                description: 'For multi-location retailers',
+                features: [
+                  'Up to 10 locations',
+                  'Advanced POS',
+                  'Omnichannel inventory',
+                  'Ecommerce platform',
+                  'Priority support (4h)',
+                  'Weekly analytics',
+                  'Custom integrations',
+                  'Loyalty program',
+                  'Marketing automation',
+                ],
+                cta: 'Schedule Demo',
+                highlight: true,
+              },
+              {
+                name: 'Enterprise',
+                price: 'Custom',
+                period: 'pricing',
+                description: 'For retail chains & franchises',
+                features: [
+                  'Unlimited locations',
+                  'Enterprise POS',
+                  'Predictive inventory',
+                  'White-label platform',
+                  'Dedicated team (1h SLA)',
+                  'Real-time analytics',
+                  'Multi-region support',
+                  'Custom development',
+                  '24/7 support',
+                ],
+                cta: 'Contact Sales',
+                highlight: false,
+              },
+            ].map((tier, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`relative rounded-2xl p-8 ${tier.highlight ? 'border-2 border-primary bg-gradient-to-br from-primary/10 to-accent/10 shadow-2xl' : 'border border-border bg-card'}`}
+              >
+                {tier.highlight && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-1 text-sm font-bold text-white">
+                    Most Popular
+                  </div>
+                )}
+                <div className="mb-6">
+                  <h3 className="mb-2 text-2xl font-black text-foreground">{tier.name}</h3>
+                  <p className="text-sm text-muted-foreground">{tier.description}</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-black text-foreground">{tier.price}</span>
+                    <span className="text-muted-foreground">{tier.period}</span>
+                  </div>
+                </div>
+                <Link
+                  href="/contact"
+                  className={`mb-8 block w-full rounded-xl py-3 text-center font-bold transition-all ${tier.highlight ? 'bg-gradient-to-r from-primary to-accent text-white hover:scale-105 hover:shadow-2xl' : 'border-2 border-border text-foreground hover:border-primary hover:bg-secondary'}`}
+                >
+                  {tier.cta}
+                </Link>
+                <ul className="space-y-3">
+                  {tier.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                      <span className="text-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-12 text-center text-sm text-muted-foreground">
+            All plans include: 99.99% uptime SLA, regular updates, and PCI compliance
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-background py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black text-foreground md:text-5xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
+              Everything about retail transformation
+            </p>
+          </div>
+          <div className="mx-auto max-w-4xl space-y-6">
+            {[
+              {
+                q: 'How quickly can we see revenue growth?',
+                a: 'Most retailers see measurable revenue increases within 4-6 weeks. Early wins include 20-30% higher online sales and 15% better in-store conversion. Full transformation typically occurs by 90 days with 2-3x revenue growth, 40% higher customer lifetime value, and 50% better inventory turnover.',
+              },
+              {
+                q: 'What is omnichannel retail?',
+                a: 'Omnichannel retail provides seamless shopping experiences across all channels - in-store, online, mobile, and social. Customers can browse online and buy in-store, order online for in-store pickup, or shop in-store and have items shipped. Our platform unifies inventory, customer data, and operations for true omnichannel excellence.',
+              },
+              {
+                q: 'Can you integrate with our existing systems?',
+                a: 'Yes! We integrate with major retail systems including Square, Shopify, Lightspeed, NetSuite, and popular accounting software. Our platform also connects with payment processors, shipping carriers, and marketplaces like Amazon and eBay. Custom integrations are included in Growth and Enterprise plans.',
+              },
+              {
+                q: 'How does inventory management work?',
+                a: 'Our platform provides real-time inventory visibility across all locations and channels. Automated reordering prevents stockouts, while predictive analytics optimize inventory levels. You can track products from supplier to customer, manage transfers between locations, and sync inventory across online and offline channels instantly.',
+              },
+              {
+                q: 'What about customer data and privacy?',
+                a: 'We maintain strict data privacy with SOC 2 Type II certification and GDPR compliance. All customer data is encrypted and stored securely. We help you build unified customer profiles while respecting privacy preferences. Customers control their data, and we provide tools for consent management and data deletion requests.',
+              },
+              {
+                q: 'Do you support mobile commerce?',
+                a: 'Absolutely! Our platform includes native iOS and Android apps for both customers and staff. Customers can shop, track orders, and manage loyalty points on mobile. Staff can process sales, check inventory, and assist customers from anywhere in the store using mobile POS capabilities.',
+              },
+              {
+                q: 'How do loyalty programs work?',
+                a: 'Our AI-powered loyalty platform rewards customers for purchases, referrals, social shares, and engagement. You can create tiered programs, offer personalized rewards, and gamify the experience. The system tracks points automatically and provides insights on customer behavior to optimize your program for maximum retention.',
+              },
+              {
+                q: 'What ongoing support do you provide?',
+                a: 'All plans include 24/7 technical support, regular platform updates, and quarterly business reviews. Growth and Enterprise clients get dedicated success managers, priority support, and access to our retail experts for merchandising strategies, marketing campaigns, and operational optimization.',
+              },
+            ].map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary"
+              >
+                <h3 className="mb-3 text-xl font-bold text-foreground">{faq.q}</h3>
+                <p className="leading-relaxed text-foreground">{faq.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-gradient-to-br from-surface to-background py-24">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl"
+          >
+            <h2 className="mb-6 text-4xl font-black text-foreground md:text-5xl">
+              Ready to Transform Retail?
+            </h2>
+            <p className="mb-8 text-xl text-muted-foreground">
+              Join 500+ retailers achieving 3x revenue growth
+            </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 py-4 font-bold text-white transition-all hover:scale-105 hover:shadow-2xl"
+              >
+                Get Started Today
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-primary px-8 py-4 font-bold text-foreground transition-all hover:bg-primary/10"
+              >
+                View Success Stories
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
